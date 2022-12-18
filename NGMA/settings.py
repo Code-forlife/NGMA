@@ -32,9 +32,9 @@ EMAIL_PORT=587
 SECRET_KEY = 'django-insecure-o+3)u@uj4s7s%-)+e3dj!u#9m7_jw9w727(0ee4cb_8lt-k@$1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 JAZZMIN_SETTINGS={
     'site_title': "NGMA",
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
