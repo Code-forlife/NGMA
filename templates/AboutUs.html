@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/AboutUs/page.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap" rel="stylesheet">
+<style>
+    #Hero2>img{
+        width:30vw;
+        border-radius: 15px;
+        transition: transform 1s; 
+    }
+    #Hero2>img:hover{
+        transform: scale(1.025);
+    }
+    #Hero1>img{
+        width:25vw;
+        border-radius: 15px;
+        transition: transform 1s; 
+    }
+    #Hero1>img:hover{
+        transform: scale(1.025);
+    }
+
+    #Picture{
+        height:70vh;
+    }
+</style>
+
+    {% endblock link %}
+    
+{% block body %}
+<div id="Content">
+    <div id="Picture" style="background-image: url({% static '/AboutUs/AboutUs1.png' %});">
+    </div>
+
+    <h1 id="Title">About Us</h1>
+    <div id="Hero1">
+        <img class="gridpic" src="{% static '/AboutUs/AboutUs2.JPG' %}">
+        <img class="gridpic" src="{% static '/AboutUs/AboutUs3.JPG' %}">
+        <img class="gridpic" src="{% static '/AboutUs/AboutUs4.JPG' %}">
+    </div>
+
+    <p>
+        The National Gallery of Modern Art is India’s premier art institution for modern and contemporary Indian art. 
+        The museum was established in 1954 with the singular aim of promoting and preserving modern Indian art. 
+        Its vast collection chronicles the trajectory of art in India from mid-18th century to the present.
+        NGMA is spread over eight acres of prime space in the heart of New Delhi at the prestigious India Gate Hexagon. 
+        The collection is showcased in Jaipur House, the former palace of the Maharaja of Jaipur. 
+        The regal ambience of the heritage structure offers a befitting backdrop for the masterpieces on display while 
+        sprawling green lawns and courtyards offer a ready stage for a sculpture garden. 
+        The new wing constructed in 2009 increased display area with new gallery floors, an art shop, auditorium, preview theatre and library.
+    </p>
+
+    <div id="Hero2">
+        <img class="gridpic" src="{% static '/AboutUs/AboutUs5.JPG' %}">
+        <img class="gridpic" src="{% static '/AboutUs/AboutUs6.JPG' %}">
+    </div>
+
+    <p>
+        The success of NGMA as a cultural hub has led to the establishment of regional centres in Mumbai and Bengaluru. 
+        Here the emphasis is on artistic innovation and promoting excellence in the field of art and curatorial practices. 
+        Indigenous art and culture is given special focus as it is believed to be vital in reshaping the cultural landscape of the nation.
+    </p>
+  
+</div> 
+
+{% endblock body %}
+    

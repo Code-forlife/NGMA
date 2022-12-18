@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+}
+
+#Content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: rgba(0, 0, 0, 0.44);
+    border-style: solid;
+}
+
+#Picture{
+    font-family: 'Mochiy Pop One', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+
+    padding-top: 4%;
+    margin-top: 4vh;;
+
+    height: 80vh;
+    width: 80%;
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#Picture>p{
+    padding-right: 2vw;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#Title{
+    font-family: montserrat;
+    font-weight: 900;
+    text-align: center;
+    color: rgb(157, 33, 185);
+    font-size: 4rem;
+    padding-top: 4vh;
+    padding-bottom: 8vh;
+    text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.532),
+    1px -1px 0 rgba(0, 0, 0, 0.371),
+    -1px 1px 0 rgba(0, 0, 0, 0.326),
+    1px 1px 0 rgba(0, 0, 0, 0.33);
+}
+
+#Form{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    column-gap: 8vw;
+    align-items: top;
+}
+
+#Form-left, #Form-right{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    row-gap: 5vh;
+}
+#Form-left>div>input,#Form-right>div>input{
+    width: 30vw;
+    height: 4vh;
+    border-radius: 1.8vh;
+    border-color: rgba(0, 0, 0, 0.353);
+    padding-left: 5px;
+}
+
+.upload{
+    background-color: rgb(134, 45, 146);
+    color:white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: black 1px solid;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+.upload:hover{
+    background-color: white;
+    color: rgb(134, 45, 146);
+}
+
+#Form>div>input:after{
+    content:" *";
+    color: red;
+}
+
+#Submit-button{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 8rem;
+}
+
+#Submit-button>button{
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    background-color: rgb(134, 45, 146);
+    border: 2px solid rgb(134, 45, 146);
+    border-radius: 1vh;
+    color:white;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+#Submit-button>button:hover{
+    background-color: white;
+    color:rgb(134, 45, 146);
+}

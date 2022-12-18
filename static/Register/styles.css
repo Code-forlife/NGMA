@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(254, 251, 200);
+    background-image: url(../Picture/Signup.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+    height: 100vh;
+    overflow:hidden;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3vh;
+}
+
+
+#Heading>h1{
+    color: #431F1F;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+#center-box{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 60%;
+
+    background-color: white;
+
+    border-radius: 20px;
+    align-items: center;
+    row-gap: 1vw;
+}
+
+#Top-text{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#Form-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    column-gap: 2vw;
+    width: 100%;
+}
+
+#Form-top-left, #Form-top-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 3vh;
+}
+
+.Text-input{
+    width: 14vw;
+    height: 4vh;
+    border-radius: 2vh;
+    border: 1px rgba(0, 0, 0, 0.312) solid;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.Text-input::placeholder{
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#Form-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3vh;
+}
+
+.Text-input2{
+    width: 31vw;
+    height: 4vh;
+    border-radius: 2vh;
+    border: 1px rgba(0, 0, 0, 0.312) solid;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.Text-input2::placeholder{
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#Register-button{
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(92, 157, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 1vh 2vw;  
+    margin-top: 2vh; 
+    transition: border 0.2s;
+}
+
+#Register-button:hover{
+    border: 1px black solid;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.275);
+}
+

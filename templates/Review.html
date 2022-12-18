@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Submit your review!{% endblock title %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static '/Review/page.css' %}">
+
+<style>
+    .rate:not(:checked) > label {
+    font-size:50px;
+}
+</style>
+
+{% endblock link %}
+
+{% block body %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert" style="user-select: auto;">
+    <strong>{{ message }}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="user-select: auto;"></button>
+</div>
+{% endfor %}
+{% endif %}
+<div id="Content">
+    <div id="Picture" style="background-image:url({% static '/Review/review.jpg' %})">
+    </div>
+
+    <form method="POST" action="/Review/">
+    {% csrf_token %}
+    <div id="Review">
+        <h1>Review Section</h1>
+            <p id="rateus">Rate Us!</p>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
+
+            <p>Feedback &#8594</p>
+            <textarea id="textbox" name="Feedback"placeholder="Express you experience!"></textarea>
+
+            <button id="submit">SUBMIT</button>
+        </div>
+    </form>
+</div> 
+{% endblock body %}

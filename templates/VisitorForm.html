@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Visitor Form{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/Visitor/page.css' %}">
+<style>
+    #Submit-button>button{
+        transition: transform 0.5s;
+    }
+     #Picture{
+        background-color: rgba(255,255,255,0.25);
+        background-blend-mode: lighten;
+    } 
+    #Submit-button>button:hover{
+        transform: scale(1.15);
+        background-color: #f532ca;
+        
+            background-blend-mode: darken;
+        cursor:pointer;
+    }
+
+    #Form>div>div>input{
+        padding-left: 7px;
+        font-size: 0.85rem;
+    }
+</style>
+<script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+    dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+    mm = '0' + mm;
+    } 
+        
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("Booking_Date").setAttribute("min", today);
+
+</script>
+{% endblock link %}
+
+
+
+{% block body %}
+<div id="Content">
+   
+    <div id="Picture" style="background-image: url({%static '/Visitor/visitor2.jpg'%})" >
+        <p>Everything has beauty <br> but not everyone sees</p>
+    </div>
+    
+    <div id="Title">
+        <p>Make Your Reservation</p>
+    </div>
+
+    <form method="POST" action="/VisitorForm/" >
+        {% csrf_token %}
+        <div id="Form">
+        <div id="Form-left">
+            <div>
+                <label for="FName">First Name</label><br>
+                <input type="text" name="FName" id="FName" value="{{fname}}" readonly>
+            </div>
+            
+            <div>
+                <label for="Email">Email Address</label><br>
+                <input type="text" name="Email" id="Email" value="{{email}}" readonly>
+            </div>
+            
+            <div>
+                <label for="Booking_Date">Booking Date</label><br>
+                <input type="date" name="Booking_Date" id="Booking_Date" min="1899-01-01" max="2000-13-13" placeholder="Enter date of visit" required>
+            </div>
+            
+            
+            <div>
+                <label for="Timing">Timing</label><br>
+                <input type="time" name="Timing" min="9:00:00" max="18:00:00" id="Timing" placeholder="Enter timing of visit" required>  
+            </div>
+
+        </div>
+        
+        <div id="Form-right">
+            <div>
+                <label for="LName">Last Name</label><br>
+                <input type="text" name="LName" id="LName" value="{{lname}}" readonly>
+            </div>
+            
+            <div>
+                <label for="PhoneNo">Phone Number</label><br>
+                <input type="number" name="PhoneNo" id="PhoneNo" value="{{phoneno}}" readonly>
+            </div>
+            
+            <div>
+                <label for="NoA">Number of Adults</label><br>
+                <input type="number" name="NoA"id="NoA" placeholder="Enter number of adults visitng" required>
+            </div>
+            
+            <div>
+                <label for="NoC">Number of children:</label><br>
+                <input type="number" name="NoC" id="NoC" placeholder="Enter the number of children visiting" min="0" max="10" required>
+            </div>
+        </div>
+        </div>
+
+            <div id="Submit-button">
+                <button id="submit">SUBMIT</button>
+            </div>
+        </div>
+    </form>
+    
+    
+</div> 
+{% endblock body %}
+    

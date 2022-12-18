@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed!</title>
+    <link rel="stylesheet" href="{% static '/Confirmation/styles.css' %} ">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+</head>
+<body style="background-image: url({% static '/Confirmation/Conf-page4.jpg'%})">
+
+    <div id="center-box">
+        <div id="Top-text">
+            <p>Booking has been confirmed!</p>
+        </div>
+        <div id="Bottom">
+            <div id="Bottom-left">
+                <p>Date of Booking:</p>
+                <box id="box">{{details.Booking_Date}}</box>
+                <p>Time:</p>
+                <box id="box">{{details.Timing}}</box>
+                <p>Amount Paid:</p>
+                <box id="box">₹ {{order.Total_Amount}}</box>
+                <button id="Download-button" >
+                    <a style="text-decoration:none;color: black" href="{% url 'generateinvoice' pk=order.id %}">Download Tickets</a></button>
+
+            </div>
+            <div id="Bottom-right">
+                <p>No. of persons allowed:</p>
+                <box id="box">Adults: {{details.NoA}}        Child: {{details.NoC}}</box>
+
+                <div id="socials">
+                    <a href="https://www.instagram.com/ngma_delhi/" target="_blank"><img src="{% static '/Confirmation/Insta-logo.png' %}"></a>
+                    <a href="https://twitter.com/ngma_delhi" target="_blank"><img src="{% static '/Confirmation/twitter-logo.png'%}"></a>
+                    <a href="https://discord.gg/btjvWpvYe2" target="_blank"><img src="{% static '/Confirmation/discord-logo.webp'%}"></a>
+                    <a href="https://www.reddit.com/r/delhi/comments/m69xxi/national_gallery_of_modern_art/" target="_blank"><img src="{% static '/Confirmation/reddit-logo.png'%}"></a>
+                </div>
+
+                <div id="QRcode">
+                    <img src="{% static '/Confirmation/QRcode.png'%}">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

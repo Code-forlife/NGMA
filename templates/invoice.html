@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <title>Invoice</title>
+<style>
+  .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: underline;
+}
+
+body {
+  position: relative;
+  margin: 0 auto; 
+  color: #001028;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  font-family: Arial;
+}
+
+header {
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+#logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#logo img {
+  width:311px; 
+  height: 52.5px;  
+  padding:0px 25px 0px 0px;
+}
+
+h1 {
+  
+  color: #5D6975;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+#project {
+  float: left;
+}
+
+#project span {
+  color: #5D6975;
+  text-align: right;
+  width: 52px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#company {
+  float: right;
+  text-align: right;
+}
+
+#project div,
+#company div {
+  white-space: nowrap;        
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+
+
+table th,
+table td {
+  text-align: center;
+}
+
+table th {
+  
+  
+  color: #5D6975;
+  border-bottom: 1px solid #C1CED9;
+  white-space: nowrap;        
+  font-weight: normal;
+}
+
+table .service,
+table .desc {
+  text-align: left;
+}
+
+table td {
+ padding-top:5px;
+ padding-bottom:5px;
+  
+}
+
+table tr {
+  border-bottom: 1px solid #C1CED9;
+}
+
+table td.service,
+table td.desc {
+  vertical-align: top;
+}
+
+table td.unit,
+table td.qty,
+table td.total {
+  font-size: 1.2em;
+}
+
+table td.grand {
+  border-top: 1px solid #5D6975;;
+}
+
+#notices .notice {
+  color: #5D6975;
+  font-size: 1.2em;
+}
+
+footer {
+  color: #5D6975;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #C1CED9;
+  padding: 8px 0;
+  text-align: center;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <header class="clearfix">
+    <div id="logo" style="display:flex; justify-content:center; align-items:center;">
+      {#<img src="static/firstapp/images/logo.png" class="brand-logo" width=60 height=60>#} <!--not working-->
+      {#<img src="static/logo.png" class="brand-logo" height="200px">#} <!--not working-->
+      <img src="/Users/pranaysinghvi/Desktop/Website/NGMA/templates/Logo.png" class="brand-logo" width=311px height=52.5px>
+    </div>
+    <h1>INVOICE</h1>
+    <div id="company" class="clearfix">
+      <div>National Gallery of Modern Art</div>
+      <div><a href="mailto:company@example.com">NGMAMumbai@NGMA.com</a></div>
+    </div>
+    <div id="project">
+      <div><span>CLIENT:</span> {{fname}} {{lname}}</div>
+      <div><span>EMAIL:</span> <a href="mailto:{{user_email}}">{{user_email}}</a></div>
+      <div><span>DATE:</span> {{date}}</div>
+      <div><span>INVOICE ID:</span> {{order_id}}</div>
+    </div>
+    <br>
+    <br>
+  </header>
+    <div class="table-container" style="overflow-x:auto">
+      <table class="table" style="width:100%">
+          <thead>
+              <tr>
+                  <th scope="col">PRODUCT</th>
+                  <th scope="col">QUANTITY</th>
+                  <th scope="col">PRICE</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td scope="row">No of Adults</td>
+                  <td>{{visit.NoA}}</td>
+                  <td>{{order.Payment_NoA}}</td>
+                  
+              </tr>
+              <tr>
+                <td scope="row">No of Children</td>
+                <td>{{visit.NoC}}</td>
+                <td>{{order.Payment_NoC}}</td>
+                
+            </tr>
+              <tr>
+                  <td scope="row"></td>
+                  <td>TOTAL: </td>
+                  <td>{{amount}}</td>
+                  
+              </tr>
+          </tbody>
+      </table>
+
+    </div>
+    <p style="text-align:right; font-size:12px;">*All values are in INR<p>
+        <h1>MUSEUM RULES</h1>
+        <ul>
+        <li><b>Do not touch works of art.</b> Your touch may not seem like much, but even the slightest contact can damage the surface of a painting, discolor stone, and even rust metal.</li>
+        <li><b>Keep a safe distance between you and each work of art.</b> This helps to avoid accidental touching or bumping.</li>
+        <li><b>Use only pencils.</b> If an accident should occur, a pencil mark is easier to remove than a pen mark. Members of the security and visitor services staff are happy to provide a pencil if you would like to write or draw during your museum visit. Be careful not to point with your pencil or other objects; this can endanger works of art.</li>
+        <li><b>No leaning on walls or cases (either to write or for physical support).</b> This helps keep works of art hung on the walls or displayed in cases safe. Feel free to sit on the benches or the floor as you talk, write, or draw.</li>
+        <li><b>No food, drink, or gum is allowed in the galleries.</b> The art in the museum will provide plenty of food for thought as well as a feast for the eyes!</li>
+         <li><b>Coats.</b> Visitors are allowed to wear coats in the museum, but the coats must remain on, never carried, at all times for the safety of the art. Coats may also be left in the coat room.</li>
+        <li><b>Running, pushing, and roughhousing are not allowed in the museum.</b> Appropriate museum behavior is necessary to avoid accidentally bumping into and damaging works of art.</li>
+        <li><b>Photography.</b> We welcome visitors to photograph or videotape works of art owned by the Hood Museum of Art (Trustees of Dartmouth College) for personal use only. No flash, please! Please be aware that occasionally a no photography symbol on a label adjacent to a work of art or at the entrance to an exhibition indicates that photography is prohibited for that work or exhibition.</li> 
+        </ul>
+</body>
+
+</html>

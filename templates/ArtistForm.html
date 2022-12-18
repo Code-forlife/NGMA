@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Artist Form{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/ArtistForm/page.css' %}"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+{% endblock link %}
+
+   
+    
+{% block body %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert" style="user-select: auto;">
+    <strong>{{ message }}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="user-select: auto;"></button>
+</div>
+{% endfor %}
+{% endif %}
+<div id="Content">
+    <div id="Picture" style="background-image: url({% static '/ArtistForm/Artst-Form.jpg' %});">
+        <p>This can be your painting!</p>
+    </div>
+    
+    <div id="Title">
+        <p>Apply to get your art displayed!</p>
+    </div>
+    <form Method="POST" action="/ArtistForm/">
+        {% csrf_token %} 
+        <div id="Form">
+            <div id="Form-left">
+                <div>
+                    <label for="FName">First Name</label><br>
+                    <input type="text" id="FName" name="FName" value="{{fname}}" readonly required>
+                </div>
+                
+                <div>
+                    <label for="Age">Age</label><br>
+                    <input type="number" id="Age" name="Age" min="15" max="60" value="{{age}}" readonly required>
+                </div>
+                
+                <div>
+                    <label for="Email">Email Address</label><br>
+                    <input type="email" id="Email" name="Email" value="{{email}}" readonly>
+                </div>
+    
+                <div>
+                    <input type="file" id="Achievements" name="Achievements" hidden/>
+                    <label for="Achievements" class="upload">Upload achievements</label>
+                </div>
+            </div>
+    
+            <div id="Form-right">
+                <div>
+                    <label for="LName">Last Name</label><br>
+                    <input type="text" id="LName" name="LName" value="{{lname}}" readonly>
+                </div>
+                
+                <div>
+                    <label for="PhoneNo">Phone Number</label><br>
+                    <input type="number" id="PhoneNo" name="PhoneNo" value="{{phoneno}}" readonly>
+                </div>
+                
+                <div>
+                    <label for="Specialization">Specialization</label><br>
+                    <input type="text" id="Specialization" name="Specialization" placeholder="Enter your specializations">
+                    </select>
+                </div>
+                
+                <div>
+                    <input type="file" id="Art" name="Art" hidden required>
+                    <label for="Art" class="upload">Upload the art</label>
+                </div>
+    
+            </div>
+        </div>
+        <div id="Submit-button">
+            <button id="submit">SUBMIT</button>
+        </div>
+    </form>
+    
+    
+    
+</div> 
+{% endblock body %}

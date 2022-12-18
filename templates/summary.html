@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/Summary/styles.css' %}">
+
+
+
+  <title>Order summary card</title>
+
+
+</head>
+
+<body>
+  <div class="container" style="background-image: url({% static '/Summary/images/pattern-background-mobile.svg' %});">
+    <div class="card">
+      <header class="card-header">
+        <img class="header-image" src="{% static '/Summary/images/illustration-hero.svg' %} " alt="illustration of a person enjoying music">
+      </header>
+      <div class="card-body">
+        <h1>Order Summary</h1>
+        <p>You can now view millions of art and artist from any device anywhere you like!</p>
+        <div class="body-plan">
+          <div class="plan">
+            <h2>Total Amount</h2>
+            <span>₹ {{Total}}</span>
+          </div>
+        </div>
+        <button class="btn" id='rzp-button1'>Proceed to Payment</button>
+        <div class="attribution">
+          Coded by <a class="change bottom " href="https://github.com/code-forlife" target="_blank">Pranay </a> and Sahil .
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  var options = {
+    "key": "{{razorpay_merchant_id}}", // Enter the Key ID generated from the Dashboard
+    "amount": "{% widthratio final_price 1 100 %}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "NGMAMumbai",
+    "description": "Test Transaction",
+    "order_id": "{{order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "callback_url": "{{callback_url}}",
+    "prefill": {
+      "name": "{{request.user.name}}",
+      "email": "{{request.user.email}}",
+      "contact": "+91" + "{{phoneno}}"
+    },
+    "theme": {
+      "color": "#2BA977"
+    }
+  };
+  var rzp1 = new Razorpay(options);
+  document.getElementById('rzp-button1').onclick = function (e) {
+    rzp1.open();
+    e.preventDefault();
+  }
+</script>
+</html>

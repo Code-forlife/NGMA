@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/Register/styles.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+
+    <Style>
+        body{
+            row-gap:2vh;
+        }
+
+        #center-box{
+            height:70%;
+        }
+
+        #Top-text>p{
+            margin-top: 3vh;
+            margin-bottom: 1vh;
+        }
+
+        #Register-button:hover{
+            cursor:pointer;
+            transform:(1.125);
+        }
+        #Buttons{
+            display: inline-flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .radio-input    {
+            display: none;
+        }
+        
+        .radio-label{
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 0.8vw;
+            cursor: pointer;
+            border: white solid 2px;
+            width: 8vw;
+            text-align: center;
+        }
+        #Buttons>label:hover{
+            border: black solid 2px;          
+        }
+        .radio-input:checked + .radio-label{
+            border: rgb(0, 0, 0) solid 2px; 
+            font-weight: bold;
+        }
+        #Artist-button{
+            background-color: rgb(247, 161, 247);
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+
+        }
+        
+        #Visitor-button{
+            background-color: rgb(157, 250, 171);
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        
+    </style>
+</head>
+<body style="background-image: url({% static '/Register/Signup.jpg' %});">
+    <div id="Heading">
+        <h1>Register Yourself for easier bookings!</h1>
+    </div>
+
+<form method="POST" action="/Register/" id="center-box">
+        {% csrf_token %}
+
+        <div id="Top-text">
+            <p>Sign up</p>
+        </div>
+        <div id="Buttons" name="Buttons">
+            <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist">
+            <label class="radio-label" for="opt1" id="Artist-button">Artist</label>
+
+            <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor">
+            <label class="radio-label" for="opt3" id="Visitor-button">Visitor</label>
+        </div>
+        <div id="Form-top">
+
+            <div id="Form-top-left">
+                <input class="Text-input" type="text" name="Fname" id="Fname" placeholder="First Name" required>
+                <input class="Text-input" type="number" name="Age" id="Age" placeholder="Age" required>
+            </div>
+
+            <div id="Form-top-right">
+                <input class="Text-input" type="text" name="Lname" id="Lname" placeholder="Last Name" required>
+                <input class="Text-input" type="number" name="PhoneNo" id="PhoneNo" placeholder="Contact Number" required> 
+            </div>
+        </div>
+
+        <div id="Form-bottom">
+            <input class="Text-input2" type="email" name="Email" id="Email" placeholder="Email Address" required>
+            <input class="Text-input2" type="text" name="Username" id="Username" placeholder="Create username" required> 
+            <input class="Text-input2" type="password" name="Password" id="Password" placeholder="Create a password" required >
+        </div>
+        <button id="Register-button">Register</button>
+</form>
+</body>

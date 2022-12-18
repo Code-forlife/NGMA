@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Artist Page{% endblock title %}
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static '/ArtistPage/page.css' %}"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+
+    <style>
+        .Hero1>img{
+            width:30vw;
+            transition:transform 1s;
+        }
+
+        .Hero1>img:hover{
+            transform:scale(1.125);
+            cursor:pointer;
+        }
+
+        #Book:hover{
+            cursor:pointer;
+        }
+    </style>
+
+    {% endblock link %}
+    
+    
+    
+
+    {% block body %}
+    <div id="Content">
+        <div id="Picture" style="background-image: url({% static '/ArtistPage/artist.webp'%});">
+        </div>
+
+        <div class="Hero1" id="H11">
+            <img src="{% static '/ArtistPage/artist1.webp'%}">
+            <p>A masterpice by famous russian artist Wassily Kandinsky</p>
+        </div>
+
+        <div class="Hero1" id="H12">
+            <p>This is a masterpiece by famous Russian artist Nicholas Roerich while talking about famous Indian art work</p>
+            <img src="{% static '/ArtistPage/artist2.avif'%}">
+        </div>
+
+        <div class="Hero1" id="H11">
+            <img src="{% static '/ArtistPage/artist3.jpeg'%}">
+            <p>This work is by the famous M. F. Husain aka the “Picasso of India”</p>
+        </div>
+
+        <div class="Hero1" id="H12">
+            <p>S. H. Raza is the maker of this amazing display of modern art</p>
+            <img src="{% static '/ArtistPage/artist4.webp'%}">
+        </div>
+
+        <div class="Hero1" id="H11">
+            <img src="{% static '/ArtistPage/artist5.webp'%}">
+            <p>This is a masterpice: "Starry Night" by the one and only Vincent Van Gogh</p>
+        </div>
+        
+        <div id="Hero4">
+            <p>You are an artist? Submit you are art today <br>to have a chance to be showcased in the next event!</p>
+            <div>
+                <button id="Book" onclick="window.location.href = '/ArtistForm';">Submit Now</button>
+            </div>
+        </div>        
+    </div> 
+
+    {% endblock body %}
+    

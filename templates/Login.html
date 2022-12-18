@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NGMA</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/Login/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+
+    <style>
+        #center-box{
+            height:65vh;
+        }
+    </style>
+
+</head>
+<body style="background-image: url({%static '/Login/login.jpg'%}); ">
+
+    <form class="details" method="Post" action="/LoginUser/">
+        {% csrf_token %}
+        <div id="center-box" >
+            {% for message in messages %}
+    
+            <div class="alert alert-success">
+                <div class="alert alert-danger" role="alert" style="color:red">
+                    {{ message }}
+                </div>
+            </div>
+
+            {% endfor %}
+            <div id="Top-text">
+                <p>Login</p>
+            </div>
+
+            <div id="Buttons" name="Buttons">
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist">
+                <label class="radio-label" for="opt1" id="Artist-button">Artist</label>
+
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt2" value="Employee"  >
+                <label class="radio-label" for="opt2" id="Employee-button">Employee</label>
+
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor" >
+                <label class="radio-label" for="opt3" id="Visitor-button">Visitor</label>
+            </div>
+            <div id="Credentials">
+                <input type="text" name="Username" id="Username" placeholder="Username" required>
+                <input type="password" name="Password" id="Password" placeholder="Password" required>
+            </div>
+            <div id="Create-account">
+                <a href="/Register">Create an account</a>
+            </div>
+            
+            <div id="Submit-button">
+                <button id="submit">Login</button>
+            </div>
+            
+            
+        </div>
+    </form>
+</body>
+</html>

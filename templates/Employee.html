@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Employee Profile{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/Employee/page.css' %}">{% endblock link %}
+{% block body %}
+<div id="Content">
+    <div id="Picture" style="background-image: url({%static '/Employee/employee.jpg'%});">
+    </div>
+
+    <div id="grid-container">
+        <div class="PFP grid-item1">
+            <img src="/media/{{empl.photo}}" alt="Profile Picture">
+        </div>
+
+        <div class = "text grid-item2">
+            <label for="Fname">First Name:</label>
+            <p id="Fname">{{fname}}</p>
+        </div>
+
+        <div class = "text grid-item3">
+            <label for="Lname">Last Name:</label>
+            <p id="Lname">{{lname}}</p>
+        </div>
+
+        <div class = "text grid-item4">
+            <label for="EmpID">Employee ID:</label>
+            <p id="EmpID">{{empl.Employee_ID}}</p>
+        </div>
+
+        <div class = "text grid-item5">
+            <label for="Post">Designation:</label>
+            <p id="Post">{{empl.Designation}}</p>
+        </div>
+
+        <div class = "text grid-item6">
+            <label for="PhNo">Phone Number:</label>
+            <p id="PhNo">{{empl.PhoneNo}}</p>
+        </div>
+
+        <div class = "text grid-item7">
+            <label for="Email">Email Address:</label>
+            <p id="Email">{{email}}</p>
+        </div>
+
+        <div class = "text grid-item8">
+            <label for="Age">Age:</label>
+            <p id="Age">{{empl.Age}}</p>
+        </div>
+
+        <div class = "text grid-item9">
+            <label for="DOB">Date of Birth:</label>
+            <p id="DOB">{{empl.DOB}}</p>
+        </div>
+
+        <div class="text grid-item10">
+            <label for="BloodGrp">Blood Group:</label>
+            <p id="BloodGrp">{{empl.Blood_Group}}</p>
+        </div>
+
+        <div class="text grid-item11">
+            <label for="Address">Address:</label>
+            <p id="Address">{{empl.Address}}</p>
+        </div>
+
+        <div class="text grid-item12">
+            <label for="DOJ">Date of Joining:</label>
+            <p id="DOJ">{{empl.DOJ}}</p>
+        </div>
+
+        <div class="text grid-item12">
+            <label for="Dept">Department:</label>
+            <p id="Dept">{{dep}}</p>
+        </div>
+        {% comment %} <div class="radio grid-item13">
+            <p>Department:</p><br>
+            <div id="radio-box">
+            <input type="radio" id="Security" name="Dept" disabled>
+            <label for="Security" name="Dept">Security</label><br><br>
+
+            <input type="radio" id="Maintainance" name="Dept" disabled>
+            <label for="Maintainance" name="Dept">Maintainance</label><br><br>
+
+            <input type="radio" id="Reception" name="Dept" disabled>
+            <label for="Reception" name="Dept">Reception</label>
+
+            <input type="radio" id="Tech" name="Dept" disabled>
+            <label for="Tech" name="Dept">Tech</label>
+            </div>
+            
+        </div> {% endcomment %}
+    </div>
+    
+    
+</div> 
+{% endblock body %}
+    

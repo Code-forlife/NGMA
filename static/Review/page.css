@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+}
+
+#Content{
+    border-top: 1px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: black;
+    border-style: solid;
+}
+
+#Picture{
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+    background-image: url(/Picture/review.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#Review{
+    background-color: #c3ff96;
+    text-align: center;
+    font-family: Montserrat;
+
+    height: 105vh;
+    padding-top: 5vh;
+
+    display: grid;
+    grid-template-columns: 20vw 20vw;
+    justify-content: center;
+    align-content: center;
+    column-gap: 15vw;
+    align-items: top;
+    justify-items: left;
+    row-gap: 8vh;
+    margin-bottom: 15vh;
+}
+
+#Review>h1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    grid-column: span 2;
+}
+
+.rate {
+    padding-left: 0px;
+    width:20vw;    
+    height: 20vh;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:61px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+#Review>p{
+    font-weight: 900;
+    font-size: 2rem; 
+    text-align: left;   
+}
+
+#textbox{
+    min-height: 15vh;
+    max-height: 25vh;
+    min-width: 20vw;
+    max-width: 35vw;
+
+    padding: 10px;
+    font-size: 16px;
+    font-family: montserrat;
+}
+
+#rateus{
+    padding-top: 12px;
+}
+
+#submit{
+    grid-column: span 2;
+    
+    font-family: Montserrat;
+    font-size: 2rem;
+    width:15vw;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #7953f4;
+    border: none;
+    border-radius: 3vh;
+    color:white;
+    transition: ease-in-out 0.3s;
+}
+
+#submit:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

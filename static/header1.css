@@ -1,0 +1,48 @@
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.473);
+}
+.linkes a{
+    text-decoration:none;
+    color: rgba(24, 160, 251, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: auto;
+    flex-shrink: 0;
+}
+#Logo{
+    width:300px; 
+    height: 52.5px; 
+    padding:0px 25px 0px 0px;
+}
+#login,#register{
+    border: 2px solid rgba(24, 160, 251, 1);
+    border-radius: 6px;
+    margin: 10px 18px;
+    padding: 5px 20px 5px 20px ;
+}
+#login{
+    padding: 5px 28px 5px 28px ;
+    transition: 0.15s ease-in-out;
+}
+#login:hover{
+    background-color: rgba(24, 160, 251, 1);
+    color: white;
+}
+#register{
+    background-color: rgba(24, 160, 251, 1);
+    color:white;
+    transition: 0.15s ease-in-out;
+}
+
+#register:hover{
+    background-color: white;
+    color:rgba(24, 160, 251, 1);
+}

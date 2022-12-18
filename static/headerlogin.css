@@ -1,0 +1,116 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkes a{
+    text-decoration:none;
+    color: rgba(24, 160, 251, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-right: 1em;
+    margin: auto;
+    flex-shrink: 0;
+}
+#Logo{
+    width:300px; 
+    height: 52.5px; 
+    padding:0px 25px 0px 0px;
+}
+
+.nav-container {
+    background-color: #ffff;
+    padding-right: 2vw;
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-left: 0px;
+    text-align: center;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+    -webkit-padding-start: 0;
+  }
+  
+  .nav-container>a {
+    text-decoration: none;
+    color: #ED3E44;
+  }
+  
+  .nav-item {
+    padding: 1em;
+    display: inline;
+  }
+  
+  .nav-item-dropdown {
+    position: relative;
+  }
+    
+    .nav-item-dropdown:hover > .dropdown-menu {
+      display: block;
+      transition: 0.2s;
+      opacity: 1;
+    }
+  
+  
+  .dropdown-trigger {
+    position: relative;
+    transition: focus 0.5s;
+  }
+
+  #menu-opener{
+    padding: 0px;
+  }
+    
+    .dropdown-trigger:focus + .dropdown-menu {
+      display: block;
+      opacity: 1;
+    }
+
+    
+    .dropdown-trigger::after {
+      content: "›";
+      position: absolute;
+      color: #ED3E44;
+      font-size: 24px;
+      font-weight: bold;
+      transform: rotate(90deg);
+      top: -5px;
+      right: -20px; 
+    }
+  
+  
+  .dropdown-menu {
+    padding: 0px;
+    background-color: #ffffff;
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    top: 2.5rem;
+    right: -10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+    width: 160px;
+    z-index: 2;
+  }
+
+  .dropdown-menu>li>a{
+    color: rgb(60, 161, 255);
+  }
+    
+  .dropdown-menu-item {
+    cursor: pointer;
+    padding: 1em;
+    text-align: center;
+  }
+
+    .dropdown-menu-item:hover{
+      background-color: rgb(60, 161, 255);  
+    }
+    .dropdown-menu-item:hover > .menu-text{
+      color: white; 
+    }
+  

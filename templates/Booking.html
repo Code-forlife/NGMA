@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Booking{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/Booking/page.css' %}">
+    <script src="{%static '/Booking/script.js' %}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
+    
+    {% endblock link %}
+
+{% block body %}
+<div id="Content">
+    <div id="Picture" style="background-image: url({% static '/Booking/Booking2.jpg' %});">
+        <p>Experience the beauty first hand</p>
+        <button onclick="window.location.href = '/VisitorForm';">Book now</button>
+    </div>
+<h1 id="location">Location Map</h1>
+    <div id="map">
+        <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1jsKbQAbAtywFm2a_OuPa9AFilCzHdE&callback=initMap&v=weekly"
+  defer
+></script>
+    </div>
+    
+<div class="hero">
+    <h1>Plan your visit!</h1>
+
+    <div id="Text-split">
+        <div id="Left-text">
+            <p> <strong>Address</strong><br><br>
+                WRGJ+8H4, Sir Cowasji<br>
+                Jahangir Public Hall,<br> 
+                Mahatma Gandhi Road,<br> 
+                Fort, Mumbai, Maharashtra</p>
+
+        </div>
+
+        <div id="Right-text">
+            <p> <strong>Hours and Admissions</strong><br><br>
+                Museum Timings<br>
+                Tuesday to Friday 11:00 AM to 6:00 PM<br>
+                Saturday and Sunday 11:00 AM - 6:00 PM<br>
+                Closed on Mondays and National<br>
+             </p>
+
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock body %}
