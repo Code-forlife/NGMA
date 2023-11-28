@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/Register/styles.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+
+</head>
+<body style="background-image: url({% static '/Login/login-bg.png' %});">
+    <!-- <div id="Heading">
+        <h1>Register Yourself for easier bookings!</h1>
+    </div> -->
+
+<form method="POST" action="/Register/" id="center-box">
+        {% csrf_token %}
+        
+        <div id="Top-text">
+            <p>Sign up</p>
+        </div>
+        <div id="Buttons" name="Buttons">
+            <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist">
+            <label class="radio-label" for="opt1" id="Artist-button">Artist</label>
+
+            <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor">
+            <label class="radio-label" for="opt3" id="Visitor-button">Visitor</label>
+        </div>
+        <div id="Form-top">
+
+            <div id="Form-top-left">
+                <input class="Text-input" type="text" name="Fname" id="Fname" placeholder="First Name" required>
+                <input class="Text-input" type="number" name="Age" id="Age" placeholder="Age" required>
+            </div>
+
+            <div id="Form-top-right">
+                <input class="Text-input" type="text" name="Lname" id="Lname" placeholder="Last Name" required>
+                <input class="Text-input" type="number" name="PhoneNo" id="PhoneNo" placeholder="Contact Number" required> 
+            </div>
+        </div>
+
+        <div id="Form-bottom">
+            <input class="Text-input2" type="email" name="Email" id="Email" placeholder="Email Address" required>
+            <input class="Text-input2" type="text" name="Username" id="Username" placeholder="Create username" required> 
+            <input class="Text-input2" type="password" name="Password" id="Password" placeholder="Create a password" required >
+        </div>
+        <button id="Register-button">Register</button>
+</form>
+</body>

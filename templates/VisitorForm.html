@@ -2,27 +2,6 @@
 {% load static %}
 {% block title %}Visitor Form{% endblock title %}
 {% block link %}<link rel="stylesheet" type="text/css" href="{% static '/Visitor/page.css' %}">
-<style>
-    #Submit-button>button{
-        transition: transform 0.5s;
-    }
-     #Picture{
-        background-color: rgba(255,255,255,0.25);
-        background-blend-mode: lighten;
-    } 
-    #Submit-button>button:hover{
-        transform: scale(1.15);
-        background-color: #f532ca;
-        
-            background-blend-mode: darken;
-        cursor:pointer;
-    }
-
-    #Form>div>div>input{
-        padding-left: 7px;
-        font-size: 0.85rem;
-    }
-</style>
 <script>
     var today = new Date();
     var dd = today.getDate();
@@ -48,8 +27,8 @@
 {% block body %}
 <div id="Content">
    
-    <div id="Picture" style="background-image: url({%static '/Visitor/visitor2.jpg'%})" >
-        <p>Everything has beauty <br> but not everyone sees</p>
+    <div id="Picture" style="background-image: url({%static '/Visitor/visitor.jpeg'%})" >
+        <!-- <p>Everything has beauty <br> but not everyone sees</p> -->
     </div>
     
     <div id="Title">
@@ -114,5 +93,6 @@
     
     
 </div> 
+
 {% endblock body %}
     

@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px ;
+    
 }
 
 #Content{
@@ -13,24 +14,28 @@
     border-bottom: 0px;
     border-color: rgba(0, 0, 0, 0.44);
     border-style: solid;
+    background-color: #333;
+    color: white;
+    padding-bottom: 35px;
 }
 
 #Picture{
-    font-family: 'Mochiy Pop One', sans-serif;
+    /* font-family: 'Mochiy Pop One', sans-serif; */
     text-align: center;
     font-size: 2.5rem;
     font-weight: 400;
-    color: white;
+    /* color: white; */
 
-    padding-top: 4%;
-    margin-top: 4vh;;
+    /* padding-top: 4%; */
+    /* margin-top: 4vh;; */
 
     height: 80vh;
-    width: 80%;
+    width: 100%;
     
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 #Picture>p{
@@ -43,11 +48,11 @@
 }
 
 #Title{
-    font-family: montserrat;
+    /* font-family: montserrat; */
     font-weight: 900;
     text-align: center;
-    color: rgb(157, 33, 185);
-    font-size: 4rem;
+    color: #8f8317;
+    font-size: 6rem;
     padding-top: 4vh;
     padding-bottom: 8vh;
     text-shadow:
@@ -60,7 +65,7 @@
 #Form{
     display: flex;
     justify-content: center;
-    font-family: Montserrat;
+    /* font-family: Montserrat; */
     column-gap: 8vw;
     align-items: top;
 }
@@ -70,21 +75,22 @@
     flex-direction: column;
     align-items: left;
     row-gap: 5vh;
+    font-size: 20px;
 }
 #Form-left>div>input,#Form-right>div>input{
     width: 30vw;
     height: 4vh;
     border-radius: 1.8vh;
-    border-color: rgba(0, 0, 0, 0.353);
-    padding-left: 5px;
+    border-color: #a79a2d;
+    color: #000;
 }
 
 .upload{
-    background-color: rgb(134, 45, 146);
+    background-color:#8f8317;
     color:white;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 25px;
     border: black 1px solid;
     cursor: pointer;
     transition: 0.15s ease-in-out;
@@ -92,7 +98,7 @@
 
 .upload:hover{
     background-color: white;
-    color: rgb(134, 45, 146);
+    color: #8f8317;
 }
 
 #Form>div>input:after{
@@ -103,7 +109,7 @@
 #Submit-button{
     text-align: center;
     font-family: Montserrat;
-    font-size: 8rem;
+    /* font-size: 12rem; */
 }
 
 #Submit-button>button{
@@ -113,9 +119,9 @@
     padding-right: 2vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
-
-    background-color: rgb(134, 45, 146);
-    border: 2px solid rgb(134, 45, 146);
+    margin-top: 40px;
+    background-color: #8f8317;
+    border: 2px solid #8f8317;
     border-radius: 1vh;
     color:white;
     transition: 0.15s ease-in-out;
@@ -124,5 +130,10 @@
 
 #Submit-button>button:hover{
     background-color: white;
-    color:rgb(134, 45, 146);
+    color:#8f8317;
 }
+
+/* .gap{
+    margin-left: 20px;
+} */
+

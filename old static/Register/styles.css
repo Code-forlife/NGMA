@@ -1,0 +1,200 @@
+body{
+    /* background-color: rgb(254, 251, 200); */
+    background-image: url(../Picture/Signup.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgba(255,255,255,0.5); */
+    background-blend-mode: lighten;
+    height: 100vh;
+    overflow:hidden;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3vh;
+}
+
+
+#Heading>h1{
+    color: #431F1F;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+#center-box{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 60%;
+
+    background-color: white;
+
+    border-radius: 20px;
+    align-items: center;
+    row-gap: 1vw;
+}
+
+#Top-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #431F1F;
+}
+
+
+#Form-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    column-gap: 2vw;
+    width: 100%;
+}
+
+#Form-top-left, #Form-top-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 3vh;
+}
+
+.Text-input{
+    width: 14vw;
+    height: 4vh;
+    border-radius: 2vh;
+    border: 1px rgba(0, 0, 0, 0.312) solid;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.Text-input::placeholder{
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#Form-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3vh;
+}
+
+.Text-input2{
+    width: 31vw;
+    height: 4vh;
+    border-radius: 2vh;
+    border: 1px rgba(0, 0, 0, 0.312) solid;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.Text-input2::placeholder{
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#Register-button{
+    padding: 1.5vh 2vw;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  background-color: #4b350f;
+  border: none;
+  border-radius: 5px;
+  font-family: "DM Serif Display", serif;
+  cursor: pointer;
+}
+
+#Register-button:hover{
+    border: 1px black solid;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.275);
+}
+
+#Artist-button:hover, #Visitor-button:hover{
+    background-color: #4B350F;
+
+    color:white;
+}
+
+#Artist-button{
+    
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+
+#Visitor-button{
+    
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+body{
+    row-gap:2vh;
+}
+
+#center-box{
+    height:70%;
+}
+
+#Top-text>p{
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+
+#Register-button:hover{
+    cursor:pointer;
+    transform:(1.125);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.473);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.46);
+}
+#Buttons{
+    display: inline-flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.radio-input    {
+    display: none;
+}
+
+.radio-label{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.8vw;
+    cursor: pointer;
+    border: white solid 2px;
+    width: 8vw;
+    text-align: center;
+}
+#Buttons>label:hover{
+    border: black solid 2px;          
+}
+.radio-input:checked + .radio-label{
+    border: rgb(0, 0, 0) solid 2px; 
+    font-weight: bold;
+}
+#Artist-button{
+    /* background-color: #4B350F; */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#Visitor-button{
+    /* background-color: #4B350F; */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.radio-input:checked + .radio-label {
+    border: rgb(0, 0, 0) solid 1.5px;
+    background: #4b350f;
+    color: white;
+  }
+  

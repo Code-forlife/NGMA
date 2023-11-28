@@ -19,8 +19,8 @@
 {% endfor %}
 {% endif %}
 <div id="Content">
-    <div id="Picture" style="background-image: url({% static '/ArtistForm/Artst-Form.jpg' %});">
-        <p>This can be your painting!</p>
+    <div id="Picture" style="background-image: url({% static '/ArtistForm/Art.jpeg' %});">
+        <!-- <p>This can be your painting!</p> -->
     </div>
     
     <div id="Title">
@@ -32,7 +32,7 @@
             <div id="Form-left">
                 <div>
                     <label for="FName">First Name</label><br>
-                    <input type="text" id="FName" name="FName" value="{{fname}}" readonly required>
+                    <input  type="text" id="FName" name="FName" value="   {{fname}}" readonly required>
                 </div>
                 
                 <div>
@@ -54,7 +54,7 @@
             <div id="Form-right">
                 <div>
                     <label for="LName">Last Name</label><br>
-                    <input type="text" id="LName" name="LName" value="{{lname}}" readonly>
+                    <input type="text" id="LName" name="LName" value="   {{lname}}" readonly>
                 </div>
                 
                 <div>

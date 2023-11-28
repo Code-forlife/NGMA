@@ -1,120 +1,152 @@
-body{
-    background-color: aqua;
-    
-    background-repeat: no-repeat;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+body {
+    background-image: url("../form-bg.png");
     background-size: cover;
-    height: 100vh;
-    overflow:hidden;
-    font-family: Montserrat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-#center-box{
+/* .Top-text{
+    display: flex;
+}    */
+
+.center-box {
     display: flex;
     flex-direction: column;
     width: 25%;
     height: 70%;
-
-    margin:auto;
+    margin: auto;
     margin-top: 15vh;
     background-color: white;
     border-radius: 20px;
     align-items: center;
 }
 
-#Top-text{
-    font-family: Arial, Helvetica, sans-serif;
+.top-text {
+    
     text-align: center;
-    font-size: 2.2rem;
-    font-weight: bolder;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #a79a2d;
 }
 
-#Buttons{
+.btns {
     display: inline-flex;
     justify-content: center;
     overflow: hidden;
 }
 
-.radio-input    {
+.radio-input {
     display: none;
 }
 
-.radio-label{
+.radio-label {
     font-size: 1rem;
-    font-weight: 400;
-    padding: 0.8vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0.7vw;
     cursor: pointer;
-    border: white solid 1.5px;
+    border: none;
+    color: #a79a2d;
 }
 
-#Buttons>label:hover{
-    border: black solid 1.5px;
+.btns>label:hover {
+    border: #a79a2d 1.5px;
+    background-color: #a79a2d;
+    color: white;
 }
 
-.radio-input:checked + .radio-label{
-    border: rgb(0, 0, 0) solid 1.5px; 
+.radio-input:checked+.radio-label {
+    border: #a79a2d solid 1.5px;
+    background-color: #a79a2d;
+    color: white;
 }
 
-#Artist-button{
-    background-color: rgb(247, 161, 247);
+#Artist-button {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
 
-#Visitor-button{
-    background-color: rgb(157, 250, 171);
+#Visitor-button {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
 
-#Credentials{
+.credentials {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 15vh;
-    margin-top: 7vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#Credentials>input{
+.credentials > input {
     width: 18vw;
     height: 5vh;
-    border-radius: 2vh;
-    border:rgba(0, 0, 0, 0.441) solid 1px;
+    border-radius: 0;
+    border: #a79a2d solid 1px;
     font-size: 15px;
     padding-left: 5px;
 }
 
-#Credentials>input::placeholder{
+.credentials > input::placeholder {
     font-size: 15px;
     padding-left: 5px;
+    color: #a79a2d;
+    font-family: "Nunito", sans-serif;
 }
 
-#Create-account>a{
+.create-account > a {
     text-align: left;
     text-decoration: none;
     margin: 0px;
     font-size: 0.8rem;
-    color: rgb(1, 21, 234);
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.311);
+    color: #a79a2d;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 1px;
 }
 
-#Submit-button{
-    margin: auto;
+.submit-button {
+    margin: 20px;
 }
 
-#Submit-button>button{
+.submit-button > button {
     padding: 1.5vh 2vw;
-    font-size: 1.5rem; 
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: white;
-    background-color: rgb(69, 165, 255);
+    background-color: #a79a2d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-#Submit-button>button:hover{
-    border: black solid 1px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.473);
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.46);
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 1px;
 }
 
+.submit-button > button:hover {
+    border: #a79a2d solid 1px;
+    box-shadow: 0px 1px 2px #a79a2d;
+    text-shadow: 0px 1px 1px #a79a2d;
+}
+
+
+#top-text {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    align-items: left;
+    padding-right: 10px;
+}
+
+.back-button{
+    align-items: left;
+}
+
+/* .top-text{
+    align-items: center;
+    justify-content: center;
+}  */

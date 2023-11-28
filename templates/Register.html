@@ -8,74 +8,20 @@
     {% load static %}
     <link rel="stylesheet" href="{% static '/Register/styles.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
-
-    <Style>
-        body{
-            row-gap:2vh;
-        }
-
-        #center-box{
-            height:70%;
-        }
-
-        #Top-text>p{
-            margin-top: 3vh;
-            margin-bottom: 1vh;
-        }
-
-        #Register-button:hover{
-            cursor:pointer;
-            transform:(1.125);
-        }
-        #Buttons{
-            display: inline-flex;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .radio-input    {
-            display: none;
-        }
-        
-        .radio-label{
-            font-size: 1rem;
-            font-weight: 400;
-            padding: 0.8vw;
-            cursor: pointer;
-            border: white solid 2px;
-            width: 8vw;
-            text-align: center;
-        }
-        #Buttons>label:hover{
-            border: black solid 2px;          
-        }
-        .radio-input:checked + .radio-label{
-            border: rgb(0, 0, 0) solid 2px; 
-            font-weight: bold;
-        }
-        #Artist-button{
-            background-color: rgb(247, 161, 247);
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-
-        }
-        
-        #Visitor-button{
-            background-color: rgb(157, 250, 171);
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-        }
-        
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:wght@400;600&family=Rakkas&display=swap"
+        rel="stylesheet">
 </head>
-<body style="background-image: url({% static '/Register/Signup.jpg' %});">
-    <div id="Heading">
+<body style="background-image: url({% static '/Login/form-bg.png' %});">
+    <!-- <div id="Heading">
         <h1>Register Yourself for easier bookings!</h1>
-    </div>
+    </div> -->
 
-<form method="POST" action="/Register/" id="center-box">
+<!-- <form method="POST" action="/Register/" id="center-box">
         {% csrf_token %}
-
+        
         <div id="Top-text">
             <p>Sign up</p>
         </div>
@@ -105,5 +51,42 @@
             <input class="Text-input2" type="password" name="Password" id="Password" placeholder="Create a password" required >
         </div>
         <button id="Register-button">Register</button>
+</form> -->
+<div class="center-box">
+    <h2 class="top-text">Sign up</h2>
+    <form method="POST" action="/Register/" id="center-box">
+        {% csrf_token %}
+        <center>
+<div class="btns" name="Buttons">
+    <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist" required>
+    <label class="radio-label" for="opt1" id="Artist-button">Artist</label>
+
+    <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor" required>
+    <label class="radio-label" for="opt3" id="Visitor-button">Visitor</label>
+</div>
+</center>
+<div class="form-top">
+    <div class="form-top-left">
+        <input class="text-input" type="text" name="Fname" id="Fname" placeholder="First Name" required>
+        <input class="text-input" type="number" name="Age" id="Age" placeholder="Age" required>
+    </div>
+    <div class="form-top-right">
+        <input class="text-input" type="text" name="Lname" id="Lname" placeholder="Last Name" required>
+        <input class="text-input" type="number" name="PhoneNo" id="PhoneNo" placeholder="Contact Number" required> 
+    </div>
+</div>
+
+<div class="form-bottom">
+    <input class="text-input2" type="email" name="Email" id="Email" placeholder="Email Address" required>
+    <input class="text-input2" type="text" name="Username" id="Username" placeholder="Create username" required> 
+    <input class="text-input2" type="password" name="Password" id="Password" placeholder="Create a password" required >
+</div>
+<div class="login-account">
+    <center><a href="/LoginUser">Already have an account?Click here to Login</a></center>
+</div>
+<center><button class="register-button">Register</button></center>
 </form>
+</div>
+
 </body>
+</html>

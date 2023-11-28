@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+}
+
+#Content{
+    border-top: 1px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: black;
+    border-style: solid;
+}
+
+#Picture{
+    font-family: 'Cherry Swash', cursive;
+    text-align: left;
+    font-size: 3.2rem;
+    color:white;
+
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+#Picture>p{
+    padding-top: 30vh;
+    padding-left:8vw;
+}
+
+#Picture>button{
+    width:10vw;
+    height:6vh;
+    margin-left:8vw;
+    font-family: Montserrat;
+    font-size: 1rem;
+    background-color: rgb(70, 153, 255);
+    border: 2px solid rgb(70, 153, 255);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+#Picture>button:hover{
+    background-color: white;
+    color: rgb(70, 153, 255);
+    transform: scale(1.2);
+}
+
+h1{
+    margin-top: 10vh;
+    margin-left: 8vw;
+    font-size: 3rem;
+    font-family: Montserrat;
+    font-weight: bolder;
+
+}
+
+#Text-split{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+#Left-text,#Right-text{
+    font-size: 1.7rem;
+    font-family:Montserrat;
+    flex: 1;
+}
+
+
+#Right-text>p{
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* API */
+#map {
+    height: 500px;
+    /* The height is 400 pixels */
+    width: 700px;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    border-radius: 15px;
+    /* The width is the width of the web page */
+  }
+#location{
+    text-align: center;
+    margin-left: 0;
+    padding-bottom: 7vh;
+    font-size: 4rem;
+}
+.hero{
+    background-color: rgba(223, 223, 223, 0.433);
+    margin-top: 15vh;
+    padding-top: 3vh;
+}

@@ -10,33 +10,21 @@
     border-bottom: 0px;
     border-color: black;
     border-style: solid;
+    background-color: #333;
 }
 
 #Picture{
-    height: 85vh;
+    height: 65vh;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
     background-repeat: no-repeat;
     background-size:cover;
     background-position: 0px -300px;
+    opacity: 50%;
+    background-attachment: fixed;
 }
 
-#Picture>p{
-    padding-top: 60vh;
-}
 
-#Picture>button{
-    width:10vw;
-    height:6vh;
-
-    font-family: Montserrat;
-    font-size: 1rem;
-    background-color: rgb(70, 153, 255);
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
 .Hero1{
     display: flex;
@@ -45,6 +33,7 @@
     column-gap: 15vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
+    
 }
 
 .Hero1>img{
@@ -54,18 +43,21 @@
 
 .Hero1>p{
     font-size: 2rem;
-    font-family: Montserrat;
+
     font-weight: 900;
     width: 30vw;
     text-align: center;
+    color: #ffffff;
 }
 
 #H11{
-    background-color: rgb(255, 255, 255);
+    background-color: #222;
+    color: white;
 }
 
 #H12{
-    background-color: rgba(223, 223, 223, 0.433);
+    background-color: #333;
+    color: white;
 }
 
 
@@ -76,34 +68,37 @@
     align-items: center;
     justify-content: center;
     column-gap: 10vw;
-    background-color: rgba(223, 223, 223, 0.433);
-
+    background-color: #333;
 }
 
 #Hero4>p{
-    font-family: Montserrat;
+    /* font-family: Montserrat; */
     font-weight: 400;
     font-size:2rem; 
+    color: #ffffff;
 }
 
 #Book{
     font-size: 1rem;
-    font-family: Montserrat;
-    border: 2px solid rgba(24, 160, 251, 1);
     border-radius: 6px;
     margin: 10px 18px;
     width: 10vw;
     height: 6vh;
-}
-
-
-#Book{
-    background-color: rgba(24, 160, 251, 1);
+    background-color: #4b350f;
     color:white;
     transition: 0.15s ease-in-out;
 }
 
-#Book:hover{
-    background-color: white;
-    color:rgba(24, 160, 251, 1);
-}
+        .Hero1>img{
+            width:30vw;
+            transition:transform 1s;
+        }
+
+        .Hero1>img:hover{
+            transform:scale(1.125);
+            cursor:pointer;
+        }
+
+        #Book:hover{
+            cursor:pointer;
+        }

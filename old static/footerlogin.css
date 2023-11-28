@@ -1,0 +1,114 @@
+#footer{
+    width:83%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-color: rgba(0,0,0,0.15);
+}
+
+#footer-logo{
+    width: 25%;
+    margin-left: 25px;
+}
+
+#footer-text1,#footer-text2{
+    font-family: Montserrat;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 24px;
+}
+
+#footer-text1>p>a,#footer-text2>p>a{
+    text-decoration: none;
+}
+
+#footer-top-right{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+#login2{
+    border: 2px solid rgba(24, 160, 251, 1);
+    border-radius: 6px;
+    margin: 10px 18px;
+    padding: 5px 28px 5px 28px ;
+}
+#login2{
+    padding: 5px 32px 5px 34px ;
+    transition: 0.15s ease-in-out;
+}
+#login2:hover{
+    background-color: rgba(24, 160, 251, 1);
+    color: white;
+}
+
+
+#footer-buttons>p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 0px;
+    margin-left: 25px;
+}
+
+#footer-buttons>a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 0px;
+    margin-left: 25px;
+}
+
+#footer-buttons>#login{
+    padding: 5px, 35px;
+}
+
+
+#footer-bottom{
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-bottom-left{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.747);
+}
+
+#footer-bottom-right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-family: Montserrat;
+}
+
+#footer-bottom-right>a>img{
+    width:30px;
+    border-radius: 19px;
+}

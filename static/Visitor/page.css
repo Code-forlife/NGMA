@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 *{
     margin: 0px;
     padding: 0px ;
+    /* color: white;  */
+    /* font-family: "Nunito", sans-serif; */
+
 }
 
 #Content{
@@ -10,24 +14,28 @@
     border-bottom: 0px;
     border-color: black;
     border-style: solid;
+    background-color: #333;
+    color: white;
+    padding-bottom: 30px;
 }
 
 #Picture{
-    font-family: Montserrat;
+    /* font-family: Montserrat; */
     text-align: right;
     font-size: 70px;
     font-weight: 700;
-    color: white;
+    /* color: white; */
 
     padding-top: 4%;
 
     height: 70vh;
     width: 100%;
-    background-color: aqua;
-    background-image: url(/Picture/visitor2.jpg);
+    background-color: rgb(0, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    opacity: 50%;
 }
 
 #Picture>p{
@@ -40,20 +48,22 @@
 }
 
 #Title{
-    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Indie Flower', cursive; */
     text-align: center;
-    color: red;
-    font-size: 6rem;
+    /* color: red; */
+    font-size: 9rem;
     padding-top: 4vh;
     padding-bottom: 8vh;
+    color: #a79a2d;
 }
 
 #Form{
     display: flex;
     justify-content: center;
-    font-family: Montserrat;
+    /* font-family: Montserrat; */
     column-gap: 8vw;
     align-items: top;
+    /* color:aquablue; */
 }
 
 #Form-left, #Form-right{
@@ -61,35 +71,58 @@
     flex-direction: column;
     align-items: left;
     row-gap: 5vh;
+    font-size: 20px;
 }
 #Form-left>div>input,#Form-right>div>input,#Form-right>div>select{
     width: 30vw;
     height: 4vh;
     border-radius: 1.8vh;
-    border-color: rgba(0, 0, 0, 0.353);
+    border-color: #a79a2d;
+    color: #000;
 }
 
 #Form>div>input:after{
     content:" *";
-    color: red;
+    color: #a79a2d;
+     /* font-size: 75px;  */
 }
 
 #Submit-button{
     text-align: center;
-    font-family: Montserrat;
+
     font-size: 8rem;
 }
 
 #Submit-button>button{
-    font-family: Montserrat;
     font-size: 2rem;
     padding-left: 3vw;
     padding-right: 3vw;
     padding-top: 3vh;
     padding-bottom: 3vh;
 
-    background-color: #FF6BDF;
+    background-color: #a79a2d;
     border: none;
     border-radius: 3vh;
-    color:white;
+    color:#333;
+}
+
+
+#Submit-button>button{
+    transition: transform 0.5s;
+}
+ #Picture{
+    background-color: rgba(0, 0, 0, 0.25);
+    background-blend-mode: lighten;
+} 
+#Submit-button>button:hover{
+    transform: scale(1.15);
+    /* background-color: rgb(255, 255, 255); */
+    
+        background-blend-mode: darken;
+    cursor:pointer;
+}
+
+#Form>div>div>input{
+    padding-left: 7px;
+    font-size: 20px;
 }

@@ -8,55 +8,65 @@
     <title>Login | NGMA</title>
     <link rel="stylesheet" type="text/css" href="{% static '/Login/styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    
     <style>
         #center-box{
             height:65vh;
         }
+        #Top-text{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            width: 100%;
+        }
+        .back-button{
+            padding-top: 10px;
+            align-items: left;
+        }
     </style>
 
 </head>
-<body style="background-image: url({%static '/Login/login.jpg'%}); ">
+<body style="background-image: url({% static '/Login/form-bg.png' %});">
+    
+
+
 
     <form class="details" method="Post" action="/LoginUser/">
         {% csrf_token %}
-        <div id="center-box" >
+        <div class="center-box">
             {% for message in messages %}
     
-            <div class="alert alert-success">
-                <div class="alert alert-danger" role="alert" style="color:red">
-                    {{ message }}
-                </div>
-            </div>
+            <div class="alert alert-danger" role="alert">
+                {{message}}
+              </div>
 
             {% endfor %}
             <div id="Top-text">
-                <p>Login</p>
+                <a href="/Home" class="back-button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></a>
+                <h2 class="top-text">Login</h2>
             </div>
-
-            <div id="Buttons" name="Buttons">
-                <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist">
+            <div class="btns" name="Buttons">
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist" required>
                 <label class="radio-label" for="opt1" id="Artist-button">Artist</label>
 
-                <input class="radio-input" type="radio" name="Type-of-account" id="opt2" value="Employee"  >
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt2" value="Employee" required>
                 <label class="radio-label" for="opt2" id="Employee-button">Employee</label>
 
-                <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor" >
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor" required>
                 <label class="radio-label" for="opt3" id="Visitor-button">Visitor</label>
             </div>
-            <div id="Credentials">
+            <div class="credentials">
                 <input type="text" name="Username" id="Username" placeholder="Username" required>
                 <input type="password" name="Password" id="Password" placeholder="Password" required>
             </div>
-            <div id="Create-account">
+            <div class="create-account">
                 <a href="/Register">Create an account</a>
             </div>
-            
-            <div id="Submit-button">
+            <div class="submit-button">
                 <button id="submit">Login</button>
             </div>
-            
-            
         </div>
     </form>
 </body>

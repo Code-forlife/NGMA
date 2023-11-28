@@ -1,0 +1,360 @@
+*{
+    margin: 0px;
+    padding: 0px ;
+}
+
+#Content{
+    border-top: 1px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: black;
+    border-style: solid;
+}
+
+#Picture{
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    /* background-image: url(/Picture/review.jpg); */
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+/* #Review{
+    background-color: #c3ff96;
+    text-align: center;
+    font-family: Montserrat;
+
+    height: 105vh;
+    padding-top: 5vh;
+
+    display: grid;
+    grid-template-columns: 20vw 20vw;
+    justify-content: center;
+    align-content: center;
+    column-gap: 15vw;
+    align-items: top;
+    justify-items: left;
+    row-gap: 8vh;
+    margin-bottom: 15vh;
+}
+
+#Review>h1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    grid-column: span 2;
+}
+
+.rate {
+    padding-left: 0px;
+    width:20vw;    
+    height: 20vh;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:61px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+#Review>p{
+    font-weight: 900;
+    font-size: 2rem; 
+    text-align: left;   
+}
+
+#textbox{
+    min-height: 15vh;
+    max-height: 25vh;
+    min-width: 20vw;
+    max-width: 35vw;
+
+    padding: 10px;
+    font-size: 16px;
+    font-family: montserrat;
+}
+
+#rateus{
+    padding-top: 12px;
+}
+
+#submit{
+    grid-column: span 2;
+    
+    font-family: Montserrat;
+    font-size: 2rem;
+    width:15vw;
+    height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #7953f4;
+    border: none;
+    border-radius: 3vh;
+    color:white;
+    transition: ease-in-out 0.3s;
+}
+
+#submit:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+} */
+
+
+
+/* testo */
+.container {
+    width: 100%;
+    height: 100vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #4646cd; */
+    /* width: 300px; */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    width: 43%;
+}
+
+.clientImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.clientImage span {
+    margin-left: 10px;
+}
+
+.clientImage img {
+    width: 40px;
+}
+
+.reviewSection {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reviewItem {
+    width: 300px;
+    padding: 10px;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    /* background-color: #10102a; */
+    border: 1px solid #10102a;
+    transition: all .2s linear;
+}
+
+.reviewItem:hover {
+    border-color: rgb(248, 195, 36);
+    transform: scale(1.01);
+    background-color: #4b350f;
+    box-shadow: 0 0px 5px 0px #cbc0c0;
+    color: white;
+}
+
+.top {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top ul {
+    display: flex;
+    list-style: none;
+}
+
+.top ul li {
+    padding-left: 4px;
+}
+
+article p {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    font-family: system-ui;
+}
+
+
+@media screen and (max-width:700px) {
+    .container {
+        height: auto;
+    }
+
+    .description {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .reviewSection {
+        padding: 0;
+    }
+
+    .reviewItem {
+        width: 100%;
+    }
+
+    .clientImage {
+        margin-bottom: 0.6rem;
+    }
+
+    .top {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+/* kdjs */
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background: #000000; 
+    /* background: -webkit-linear-gradient(to right, #fba88f, #a5703b);  
+    background: linear-gradient(to right, #d7a768, #bd763c);      */
+  font-family: 'Montserrat', sans-serif;
+  /* overflow: hidden; */
+  /* height:100vh; */
+}
+
+.panel-container {
+  background-color: #fbfcff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding: 30px; */
+  max-width: 1200px;
+  height: 400px;
+  color:#b98b3d;
+  margin:5% auto 2% auto;
+}
+
+.panel-container strong {
+  line-height: 20px;
+}
+
+.ratings-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.rating {
+  flex: 1;
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px 5px;
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating img {
+  width: 40px;
+}
+
+.rating small {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0 0;
+}
+
+.rating:hover small,
+.rating.active small {
+  color: #8f94fb;
+}
+
+.btn {
+  background-color: #8f94fb;
+  color: #000;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.fa-heart {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+
+.credit a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .credit {
+      text-align: center;
+  }
+

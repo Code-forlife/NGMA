@@ -1,53 +1,140 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Submit your review!{% endblock title %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}Review{% endblock title %} 
 {% block link %}
-<link rel="stylesheet" type="text/css" href="{% static '/Review/page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/Review/page.css' %}" />
 
-<style>
-    .rate:not(:checked) > label {
-    font-size:50px;
-}
-</style>
-
-{% endblock link %}
-
-{% block body %}
-{% if messages %}
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert" style="user-select: auto;">
-    <strong>{{ message }}</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="user-select: auto;"></button>
-</div>
-{% endfor %}
-{% endif %}
-<div id="Content">
-    <div id="Picture" style="background-image:url({% static '/Review/review.jpg' %})">
-    </div>
-
-    <form method="POST" action="/Review/">
-    {% csrf_token %}
-    <div id="Review">
-        <h1>Review Section</h1>
-            <p id="rateus">Rate Us!</p>
-            <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-            </div>
-
-            <p>Feedback &#8594</p>
-            <textarea id="textbox" name="Feedback"placeholder="Express you experience!"></textarea>
-
-            <button id="submit">SUBMIT</button>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+{% endblock link %}{% block body %}
+<main>
+  <section class="reviews">
+    <section>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h3 class="mb-4 head-text">Testimonials</h3>
         </div>
-    </form>
-</div> 
-{% endblock body %}
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-4 mb-5 mb-md-0 review-card">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3 name">Maria Smantha</h5>
+          <h6 class="mb-3 designation">Web Developer</h6>
+          <p class="px-xl-3 description">
+            <i class="fas fa-quote-left pe-2 description"></i>Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Quod eos id officiis hic tenetur quae
+            quaerat ad velit ab hic tenetur.<i class="fas fa-quote-right pe-2 description"></i>
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3 name">Lisa Cudrow</h5>
+          <h6 class="mb-3 designation">Graphic Designer</h6>
+          <p class="px-xl-3 description">
+            <i class="fas fa-quote-left pe-2 description"></i>Ut enim ad minima veniam, quis
+            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+            aliquid commodi.<i class="fas fa-quote-right pe-2 description"></i>
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3 name">John Smith</h5>
+          <h6 class="mb-3 designation">Marketing Specialist</h6>
+          <p class="px-xl-3 description">
+            <i class="fas fa-quote-left pe-2 description"></i>At vero eos et accusamus et
+            iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+            deleniti atque corrupti.<i class="fas fa-quote-right pe-2 description"></i>
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="far fa-star fa-md text-warning"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  {% endblock body %}
+</main>

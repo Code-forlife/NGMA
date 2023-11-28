@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Submit your review!{% endblock title %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static '/Review/page.css' %}">
+
+<style>
+    .rate:not(:checked) > label {
+    font-size:50px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+
+        <link rel="stylesheet" media="all" href="css/styles.css" />
+        <link rel="stylesheet" media="all" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+
+{% endblock link %}
+
+{% block body %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert" style="user-select: auto;">
+    <strong>{{ message }}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="user-select: auto;"></button>
+</div>
+{% endfor %}
+{% endif %}
+<div id="Content">
+    <div id="Picture" style="background-image:url({% static '/Review/review.png' %})">
+    </div>
+<!-- 
+    <form method="POST" action="/Review/">
+    {% csrf_token %}
+    <div id="Review">
+        <h1>Review Section</h1>
+            <p id="rateus">Rate Us!</p>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
+
+            <p>Feedback &#8594</p>
+            <textarea id="textbox" name="Feedback"placeholder="Express you experience!"></textarea>
+
+            <button id="submit">SUBMIT</button>
+        </div>
+    </form> -->
+</div> 
+
+<div id="panel" class="panel-container">
+    <strong>How satisfied are you with our <br /> customer support performance?</strong>
+    <div class="ratings-container">
+      <div class="rating">
+        <img src="{% static '/Review/sad.png' %}" alt=""/>
+        <small>Unhappy</small>
+      </div>
+
+      <div class="rating">
+        <img src="{% static '/Review/neutral.png' %}" alt=""/>
+        <br>
+        <small>Neutral</small>
+      </div>
+
+      <div class="rating active">
+        <img src="{% static '/Review/happiness.png' %}" alt=""/>
+        <small>Satisfied</small>
+      </div>
+    </div>
+    <button class="btn" id="send">Send Review</button>
+  </div>
+  
+
+<div class="container">
+    <h2> Our Happy Clients </h2>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, atque? Repudiandae
+        possimus asperiores hic nemo id a molestiae minus impedit!</p>
+
+    <!-- Clients Review Section -->
+    <div class="reviewSection">
+
+    <!-- Clients Review-1 Section Starts from Here  -->
+        <div class="reviewItem">
+            <div class="top">
+                <div class="clientImage">
+                    <img src="./client.png" alt="">
+                    <span>Raju Sheoran</span>
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                </ul>
+            </div>
+            <article>
+                <p class="review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae ipsa
+                    voluptatibus perferendis quos eaque nemo error tempora harum quas, laudantium tenetur, neque,
+                    facere exercitationem!</p>
+                <p>Jan 01, 2023</p>
+            </article>
+        </div>
+
+    <!-- Clients Review-2 Section Starts from Here  -->
+        <div class="reviewItem">
+            <div class="top">
+                <div class="clientImage">
+                    <img src="./client.png" alt="">
+                    <span>Raju Sheoran</span>
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                </ul>
+            </div>
+            <article>
+                <p class="review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae ipsa
+                    voluptatibus perferendis quos eaque nemo error tempora harum quas, laudantium tenetur, neque,
+                    facere exercitationem!</p>
+                <p>Jan 01, 2023</p>
+            </article>
+        </div>
+
+
+
+        
+    <!-- Clients Review-3 Section Starts from Here  -->
+        <div class="reviewItem">
+            <div class="top">
+                <div class="clientImage">
+                    <img src="./client.png" alt="">
+                    <span>Raju Sheoran</span>
+                </div>
+                <ul>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                </ul>
+            </div>
+            <article>
+                <p class="review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae ipsa
+                    voluptatibus perferendis quos eaque nemo error tempora harum quas, laudantium tenetur, neque,
+                    facere exercitationem!</p>
+                <p>Jan 01, 2023</p>
+            </article>
+        </div>
+    </div>
+</div>
+
+<script src="{%static '/Review/script.js'%}"></script>
+{% endblock body %}

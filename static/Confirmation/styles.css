@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
 body{
-    background-color: aqua;
+    background-color: #333;
     background-image: url(../Picture/Junk/Conf-page4.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     overflow:hidden;
-    font-family: Montserrat;
+    font-family: "Nunito", sans-serif;
+    /* font-family: Montserrat; */
+
 }
 
 #center-box{
@@ -17,8 +20,11 @@ body{
     margin:auto;
     margin-top: 15vh;
     background-color: white;
-
+    /* color:white; */
     border-radius: 20px;
+}
+p{
+    /* color: white; */
 }
 
 #Top-text{
@@ -52,16 +58,17 @@ body{
 #box{
     width: 15vw;
     height: 4vh;
-    border: 1px solid rgba(0, 0, 0, 0.69);
+    /* border: 1px solid rgba(0, 0, 0, 0.69); */
     border-radius: 2vh;
 }
 
 #Download-button{
     color: white;
-    background-color: rgba(24, 160, 251, 1);
+    background-color: #a79a2d;
     border: none;
     padding: 2vh;
     margin-top: 4vh;
+    border-radius: 20px;
 }
 
 #socials{
@@ -88,3 +95,6 @@ body{
 
 }
 
+.back-button{
+    align-items: center;
+}

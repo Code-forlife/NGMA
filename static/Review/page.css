@@ -1,129 +1,120 @@
-*{
-    margin: 0px;
-    padding: 0px ;
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: wh;
+  }
+  
+  /* Basic styling for the layout */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+  }
+  
+main{
+  background-color: #333;
 }
-
-#Content{
-    border-top: 1px;
-    border-right: 0px;
-    border-left: 0px;
-    border-bottom: 0px;
-    border-color: black;
-    border-style: solid;
-}
-
-#Picture{
-    height: 100vh;
-    width: 100%;
-    background-color: aqua;
-    background-image: url(/Picture/review.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-}
-
-#Review{
-    background-color: #c3ff96;
+  header {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    font-family: Montserrat;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .reviews {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 170px;
+    margin-bottom: 100px;
+  }
+  
+  .review {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .reviewer-info img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .review-text {
+    font-style: italic;
+  }
+  /* Additional styling can be added as needed */
+  
 
-    height: 105vh;
-    padding-top: 5vh;
+  .row{
+    --mdb-gutter-x: 1.5rem;
+    --mdb-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 200px; */
+    margin-right: calc(-0.5*var(--mdb-gutter-x));
+    margin-left: calc(-0.5*var(--mdb-gutter-x));
+  }
 
-    display: grid;
-    grid-template-columns: 20vw 20vw;
-    justify-content: center;
-    align-content: center;
-    column-gap: 15vw;
-    align-items: top;
-    justify-items: left;
-    row-gap: 8vh;
-    margin-bottom: 15vh;
-}
+  .head-text{
+    color: #8f8317;
+    font-family: "Nunito", sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    text-shadow: 0px 1px 1px #000;
+    margin-bottom: 45px;
+  }
 
-#Review>h1{
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 3rem;
-    grid-column: span 2;
-}
+  .name{
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    /* font-weight: 700;
+    text-shadow: 0px 1px 1px #000; */
+  }
 
-.rate {
-    padding-left: 0px;
-    width:20vw;    
-    height: 20vh;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:61px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #ffc700;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-}
+  .designation{
+    color: #8f8317;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+  }
 
-#Review>p{
-    font-weight: 900;
-    font-size: 2rem; 
-    text-align: left;   
-}
+  .description{
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
+  }
 
-#textbox{
-    min-height: 15vh;
-    max-height: 25vh;
-    min-width: 20vw;
-    max-width: 35vw;
-
-    padding: 10px;
-    font-size: 16px;
-    font-family: montserrat;
-}
-
-#rateus{
-    padding-top: 12px;
-}
-
-#submit{
-    grid-column: span 2;
-    
-    font-family: Montserrat;
-    font-size: 2rem;
-    width:15vw;
-    height: 10vh;
-    margin-left: auto;
-    margin-right: auto;
-
-    background-color: #7953f4;
-    border: none;
-    border-radius: 3vh;
-    color:white;
-    transition: ease-in-out 0.3s;
-}
-
-#submit:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-}
+  .text-warning{
+    scale: 2;
+    margin-right: 12px;
+  }

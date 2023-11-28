@@ -18,12 +18,12 @@ django.utils.encoding.force_text = force_str
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS=True
-EMAIL_HOST='smtp@spit.ac.in'
-EMAIL_HOST_USER='pranay.singhvi@spit.ac.in'
-EMAIL_HOST_PASSWORD='aVIRAJ1973'
-EMAIL_PORT=587
+# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS=True
+# EMAIL_HOST=''
+# EMAIL_HOST_USER='pranay.singhvi@spit.ac.in'
+# EMAIL_HOST_PASSWORD=''
+# EMAIL_PORT=587
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -32,17 +32,37 @@ EMAIL_PORT=587
 SECRET_KEY = 'django-insecure-o+3)u@uj4s7s%-)+e3dj!u#9m7_jw9w727(0ee4cb_8lt-k@$1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 JAZZMIN_SETTINGS={
     'site_title': "NGMA",
     'site_logo':"../static/logo.png",
-    "site_header":"NGMA"
+    # "site_header":"NGMA",
     # "site_brand":"NGMA"
-}
+    "topmenu_links": [
 
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # external url that opens in a new window (Permissions can be added)
+        # {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+        # App with dropdown menu to all its models pages (Permissions checked against models)
+        {"app": "books"},
+    ],
+    "custom_css": None,
+    "custom_js": None,
+    # "show_sidebar": False,
+    # "language_chooser": True,
+    "hide_models": ["auth.group","Ngmaapp.VisitorDetails","Ngmaapp.ArtistDetails"],
+    "hide_apps": ["VisiterForm"],
+     "show_ui_builder": True,
+}
 # Application definition
 
 INSTALLED_APPS = [

@@ -13,8 +13,8 @@ html {
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: 1.6rem;
-  color: hsl(224, 23%, 55%);
-  background-color: hsl(225, 100%, 94%);
+  color: hsl(90, 28%, 58%);
+  background-color: #333;
 }
 h1 {
   color: hsl(223, 47%, 23%);
@@ -49,7 +49,7 @@ span {
   transition: all 0.2s;
 }
 .card-header {
-  background-color: #fff;
+  background-color: #a79a2d;
 }
 .header-image {
   width: 100%;
@@ -61,7 +61,7 @@ span {
   align-items: center;
   text-align: center;
   gap: 2.5rem;
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 3rem;
@@ -86,13 +86,13 @@ span {
 
 .change {
   font-size: 1.3rem;
-  color: hsl(245, 75%, 52%);
+  color: #a79a2d;
   font-weight: 700;
   transition: all 0.2s;
 }
 .change:hover {
   text-decoration: none;
-  color: #766cf1;
+  color: #e9d94a;
 }
 
 .btn {
@@ -100,7 +100,7 @@ span {
   width: 100%;
   border-radius: 15px;
   border: none;
-  background-color: hsl(245, 75%, 52%);
+  background-color: #a79a2d;
   color: #fff;
   font-weight: 900;
   font-size: 1.7rem;
@@ -109,7 +109,7 @@ span {
   transition: background-color 0.3s;
 }
 .btn:hover {
-  background-color: #766cf1;
+  background-color: #968b27;
 }
 
 .btn-null {

@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+  color: hsl(224, 23%, 55%);
+  background-color: hsl(225, 100%, 94%);
+}
+h1 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: hsl(223, 47%, 23%);
+  white-space: nowrap;
+}
+span {
+  font-size: 1.4rem;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card {
+  max-width: 35rem;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.card-header {
+  background-color: #fff;
+}
+.header-image {
+  width: 100%;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 3rem;
+}
+.attribution {
+  font-size: 1rem;
+}
+.body-plan {
+  display: flex;
+  padding: 2rem;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+.plan {
+  text-align: left;
+  margin-right: 3rem;
+}
+
+.change {
+  font-size: 1.3rem;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.change:hover {
+  text-decoration: none;
+  color: #766cf1;
+}
+
+.btn {
+  padding: 1.6rem 4rem;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.7rem;
+  box-shadow: 0 10px 20px 0px hsla(245, 75%, 52%, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #766cf1;
+}
+
+.btn-null {
+  color: hsl(224, 23%, 55%);
+  border: none;
+  background: none;
+  font-weight: 900;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-family: 'Red Hat Display', sans-serif;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.btn-null:hover {
+  color: hsl(223, 47%, 23%);
+}
+.bottom {
+  font-size: 1rem;
+}
+@media screen and (min-width: 500px) {
+  .card {
+    max-width: 40rem;
+  }
+  .body-plan {
+    justify-content: space-between;
+  }
+  .container {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

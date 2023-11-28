@@ -38,6 +38,8 @@ def Artist(request):
     return render(request,'ArtistPage.html')
 import razorpay
 razorpay_client = razorpay.Client(auth=(settings.razorpay_id, settings.razorpay_account_id))
+
+
 # Visitor form #razorpay integration
 def VisitorForm(request):
     if request.user.is_anonymous or not(VisitorDetails.objects.filter(username=request.user.username).exists()):
@@ -166,28 +168,28 @@ def Register(request):
 
         # messages.success(request,"Your Account has been successfully created.")
         #Welcome Email
-        subject ="Welcome to the largest Community of art"
-        message="Hello there!! "+ Fname+"\nWelcome to some place where you can share your art ,learn about different forms of art and teach your creative students about your art\n"+"We have also sent you a confirmation email, please confirm your email address. \n\nThanking You\nPranay Singhvi"
-        from_email = settings.EMAIL_HOST_USER
-        to_list = [myuser.email]
-        send_mail(subject, message, from_email, to_list, fail_silently=False)
+        # subject ="Welcome to the largest Community of art"
+        # message="Hello there!! "+ Fname+"\nWelcome to some place where you can share your art ,learn about different forms of art and teach your creative students about your art\n"+"We have also sent you a confirmation email, please confirm your email address. \n\nThanking You\nPranay Singhvi"
+        # from_email = settings.EMAIL_HOST_USER
+        # to_list = [myuser.email]
+        # send_mail(subject, message, from_email, to_list, fail_silently=False)
         
         # Email Address Confirmation Email
-        current_site = get_current_site(request)
-        email_subject = "Confirm your Email @ NGMA Login!!"
-        message2 = render_to_string('email_confirmation.html',{
-            'name': myuser.first_name,
-            'domain': current_site.domain,
-            'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
-            'token': account_activation_token.make_token(myuser)
-        })
-        emails = EmailMessage(
-        email_subject,
-        message2,
-        settings.EMAIL_HOST_USER,
-        [myuser.email],
-        )       
-        emails.send(fail_silently = True)
+        # current_site = get_current_site(request)
+        # email_subject = "Confirm your Email @ NGMA Login!!"
+        # message2 = render_to_string('email_confirmation.html',{
+        #     'name': myuser.first_name,
+        #     'domain': current_site.domain,
+        #     'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
+        #     'token': account_activation_token.make_token(myuser)
+        # })
+        # emails = EmailMessage(
+        # email_subject,
+        # message2,
+        # settings.EMAIL_HOST_USER,
+        # [myuser.email],
+        # )       
+        # emails.send(fail_silently = True)
         return redirect('LoginUser/')
     return render(request,'Register.html')
 
@@ -277,7 +279,7 @@ def handlerequest(request):
                 except:
                     order_db.payment_status = 2
                     order_db.save()
-                    return HttpResponse("Failed")
+                    return render(request,'paymentfailed.html')
             else:
                 order_db.payment_status = 2
                 order_db.save()
@@ -299,6 +301,8 @@ def render_to_pdf(template_src, context_dict={}):
     if not pdf.err:
         return HttpResponse(result.getvalue(), content_type='application/pdf')
     return None
+
+
 class GenerateInvoice(View):
     def get(self, request, pk, *args, **kwargs):
         # try:
@@ -331,3 +335,8 @@ class GenerateInvoice(View):
             response['Content-Disposition'] = content
             return response
         return HttpResponse("Not found")
+    
+    
+
+
+

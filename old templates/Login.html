@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | NGMA</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/Login/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <style>
+        #center-box{
+            height:65vh;
+        }
+        #Top-text{
+            display: flex;
+            justify-content:space-around;
+            width: 100%;
+            align-items: center;
+        }
+        .back-button{
+            padding-top: 10px;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body style="background-image: url({% static '/Login/login-bg.png' %});">
+    
+    <form class="details" method="Post" action="/LoginUser/">
+        {% csrf_token %}
+        <div id="center-box" >
+            {% for message in messages %}
+    
+            <div class="alert alert-danger" role="alert">
+                {{message}}
+              </div>
+
+            {% endfor %}
+            <div id="Top-text">
+                <a href="/Home" class="back-button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></a>
+                <p class="login-text">Login</p>
+                <p></p>
+            </div>
+
+            <div id="Buttons" name="Buttons">
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt1" value="Artist" required>
+                <label class="radio-label" for="opt1" id="Artist-button">Artist</label>
+
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt2" value="Employee"  required>
+                <label class="radio-label" for="opt2" id="Employee-button">Employee</label>
+
+                <input class="radio-input" type="radio" name="Type-of-account" id="opt3" value="Visitor" required>
+                <label class="radio-label" for="opt3" id="Visitor-button">Visitor</label>
+            </div>
+            <div id="Credentials">
+                <input class="credentials" type="text" name="Username" id="Username" placeholder="Username" required>
+                <input class="credentials" type="password" name="Password" id="Password" placeholder="Password" required>
+            </div>
+            
+            <div id="Submit-button">
+                <button id="submit">Login</button>
+            </div class="backhome">
+
+            <div id="Create-account">
+                <a class="create-account-text" href="/Register">Create an account</a>
+            </div>
+            
+           
+            <form class="details" method="post" action="/LoginUser/">
+        </div>
+       
+    </form>
+</body>
+</html>

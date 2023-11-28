@@ -1,0 +1,239 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | NGMA</title>
+    {% block link %}{% endblock link %}
+    {% comment %} <link rel="icon" type="image/x-icon" href="{% static '/ContactUs/Picture/Logo.png' %}"> {% endcomment %}
+    {% if request.user.is_anonymous %}
+    <link rel="stylesheet" type="text/css" href="{% static 'header1.css' %} "> 
+    <link rel="stylesheet" type="text/css" href="{% static 'footer1.css' %} ">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:wght@400;600&family=Rakkas&display=swap"
+      rel="stylesheet">
+
+      <!-- Font Awesome Icons -->
+      <script src="https://kit.fontawesome.com/2d5a3920e3.js" crossorigin="anonymous"></script>
+      <script>
+        document.querySelector('.menu').addEventListener('click', () => {
+            document.querySelectorAll('.target').forEach((item) => {
+                item.classList.toggle('change');
+            })
+        })
+    </script>
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static 'headerlogin.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'footerlogin.css' %} ">
+
+    {% endif %}
+    
+    <style>
+        #footer-text1>p>a:visited,#footer-text2>p>a:visited{
+            text-decoration:none;
+            color:black;
+        }
+        #register:hover{
+            background-color: rgba(255, 255, 255, 0);
+            color:rgba(24, 160, 251, 1);
+        }
+    </style>
+
+</head> 
+<body>
+    {% if request.user.is_anonymous %}
+    <!-- <header>
+        <nav>
+            <div class="container topBotomBordersOut">
+                <a href="/AboutUs">About us</a>
+                <a href="https://www.amazon.in/stores/Tamatina/page/ED308B1A-CD87-45E5-A219-5A9DB44AACE9?ref_=ast_bln" target="_blank">Art Shop</a>
+                <a href="/Booking">Booking</a>
+                <a href="/Artist">Artist</a>
+                <a href="/ContactUs">Contact us</a>
+                    <a href="/LoginUser" id="login">Login</a>
+                    <a href="/Register" id="register" style="margin-left: 5px">Register</a>
+            </div>
+        </nav>
+    </header> -->
+
+    <!-- Navbar  -->
+    <nav class="navbar target">
+        <a href="https://www.amazon.in/stores/Tamatina/page/ED308B1A-CD87-45E5-A219-5A9DB44AACE9?ref_=ast_bln" class="navbar-link">
+            <i class="fa-solid fa-store"></i>
+            <span>Art Shop</span>
+        </a>
+        <a href="#" class="navbar-link">
+            <i class="fa-solid fa-palette"></i>
+            <span>Artist</span>
+        </a>
+        <a href="/Booking" class="navbar-link">
+            <i class="fa-solid fa-address-book"></i>
+            <span>Booking</span>
+        </a>
+        <a href="/ContactUs" class="navbar-link">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>Contact Us</span>
+        </a>
+        <a href="/AboutUs" class="navbar-link">
+            <i class="fa-solid fa-users"></i>
+            <span>About Us</span>
+        </a>
+        <a href="/LoginUser" class="navbar-link">
+            <i class="fa-solid fa-user"></i>
+            <span>Login</span>
+        </a>
+        <a href="/Register" class="navbar-link">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Register</span>
+        </a>
+    </nav>
+    <div class="menu target"></div>
+    <!-- End of Navbar  -->
+
+    
+    {% else %}
+    <header>
+        <a href="/Home"><img src="{%static 'Logo.png'%}" id="Logo"></a>
+        <nav>
+            <div class="cont topBotomBordersOut">
+                <a href="/AboutUs">About us</a>
+                <a href="https://www.amazon.in/stores/Tamatina/page/ED308B1A-CD87-45E5-A219-5A9DB44AACE9?ref_=ast_bln" target="_blank">Art Shop</a>
+                <a href="/Booking">Booking</a>
+                <a href="/Artist">Artist</a>
+                <a href="/ContactUs">Contact us</a>
+                
+                <div class="nav-container">
+                    <ul class="nav-items">
+                      <li class="nav-item nav-item-dropdown">
+                        <a class="dropdown-trigger" id="menu-opener" href="#">{{request.user.first_name}}</a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-menu-item">
+                            <a href="/Review" class="menu-text">Leave a review</a>
+                          </li>
+                          <li class="dropdown-menu-item">
+                            <a href="/LogoutUser/" class="menu-text">Logout</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+    </header>
+    {% endif %}
+    
+    {% block body %}{% endblock body %}
+    
+    {% if request.user.is_anonymous %}
+    <footer id="footer">
+
+        <div id="footer-top">
+
+            <img src="{%static '/ContactUs/Picture/Logo.png'%}" id="footer-logo">            
+
+            <div id="footer-top-right">
+                <div id="footer-text1">
+                    <p>
+                        <strong>Community</strong><br><br>
+                        <a href="/Artist">Artists Page</a><br> 
+                        <a href="">NGMA Delhi</a><br>
+                        <a href="/admin">Admin</a>
+                    </p>
+                </div>
+
+                <div id="footer-text2">
+                    <p>
+                        <strong>Company</strong><br><br>
+                        <a href="/AboutUs">About Us</a><br>
+                        <a href="/ContactUs">Contact Us</a><br>
+                        <a href="/Employee">Employee</a>
+                    </p>
+                </div>
+
+                <div id="footer-buttons">
+                    <a href="/Register" id="register2">Register</a>      
+                    <a href="/LoginUser" id="login2">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-bottom">
+            <div id="footer-bottom-left">
+                <p>
+                    &#169; Govt.Inc. 1947. We love our public!
+                </p>
+            </div>
+            <div id="footer-bottom-right">
+                <p>Follow us:</p>
+
+                <a href="https://www.instagram.com/ngma_delhi/" target="_blank"><img src="{%static '/ContactUs/Picture/Insta-logo.png'%}"></a>
+                <a href="https://twitter.com/ngma_delhi" target="_blank"><img src="{%static '/ContactUs/Picture/twitter-logo.png'%}"></a>
+                <a href="https://www.reddit.com/r/delhi/comments/m69xxi/national_gallery_of_modern_art/" target="_blank"><img src="{%static '/ContactUs/Picture/reddit-logo.png'%}"></a>
+            </div>
+        </div>  
+
+    </footer>
+    {% else %}
+    <footer id="footer">
+
+        <div id="footer-top">
+
+            <img src="{%static '/ContactUs/Picture/Logo.png'%}" id="footer-logo">           
+            <div id="footer-top-right">
+                <div id="footer-text1">
+                    <p>
+                        <strong>Community</strong><br><br>
+                        <a href="/Artist">Artists Page</a><br> 
+                        <a href="">NGMA Delhi</a><br>
+                        <a href="/admin">Admin</a>
+                    </p>
+                </div>
+
+                <div id="footer-text2">
+                    <p>
+                        <strong>Company</strong><br><br>
+                        <a href="/AboutUs">About Us</a><br>
+                        <a href="/ContactUs">Contact Us</a><br>
+                        <a href="/Employee">Employee</a>
+                    </p>
+                </div>
+                <div id="footer-buttons">
+                    <p>{{request.user.first_name}} {{request.user.last_name}}</p>      
+                    <a href="/LogoutUser/" id="login2">Logout</a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="footer-bottom">
+            <div id="footer-bottom-left">
+                <p>
+                    &#169; Govt.Inc. 1947. We love our public!
+                </p>
+            </div>
+            <div id="footer-bottom-right">
+                <p>Follow us:</p>
+
+                <a href="https://www.instagram.com/ngma_delhi/" target="_blank"><img src="{%static '/ContactUs/Picture/Insta-logo.png'%}"></a>
+                <a href="https://twitter.com/ngma_delhi" target="_blank"><img src="{%static '/ContactUs/Picture/twitter-logo.png'%}"></a>
+                <a href="https://www.reddit.com/r/delhi/comments/m69xxi/national_gallery_of_modern_art/" target="_blank"><img src="{%static '/ContactUs/Picture/reddit-logo.png'%}"></a>
+            </div>
+        </div>  
+
+    </footer>
+    {% endif %}
+
+
+
+    
+
+</body>
+</html>
+

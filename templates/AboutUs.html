@@ -4,34 +4,11 @@
 {% block link %}<link rel="stylesheet" type="text/css" href="{% static '/AboutUs/page.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap" rel="stylesheet">
-<style>
-    #Hero2>img{
-        width:30vw;
-        border-radius: 15px;
-        transition: transform 1s; 
-    }
-    #Hero2>img:hover{
-        transform: scale(1.025);
-    }
-    #Hero1>img{
-        width:25vw;
-        border-radius: 15px;
-        transition: transform 1s; 
-    }
-    #Hero1>img:hover{
-        transform: scale(1.025);
-    }
-
-    #Picture{
-        height:70vh;
-    }
-</style>
-
     {% endblock link %}
     
 {% block body %}
 <div id="Content">
-    <div id="Picture" style="background-image: url({% static '/AboutUs/AboutUs1.png' %});">
+    <div id="Picture" style="background-image: url({% static '/AboutUs/bg.jpeg' %});">
     </div>
 
     <h1 id="Title">About Us</h1>

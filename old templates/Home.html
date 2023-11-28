@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/Home/page.css' %}">
+<style>
+    
+    .Hero1>img{
+        width:30vw;
+        border-radius: 15px;
+        transition: transform 1s; 
+    }
+    .Hero1>img:hover{
+        transform: scale(1.125);
+    }
+
+    #Hero3>img{
+        width:25vw;
+        border-radius: 15px;
+        transition: transform 1s; 
+    }
+    #Hero3>img:hover{
+        transform: scale(1.025);
+    }
+
+    #Picture>button:hover{
+    /* background-color: white;
+    color: rgb(70, 153, 255); */
+    transform: scale(1.125);
+}
+</style>
+
+{% endblock link %}
+
+
+
+ {% block body %}
+ <div id="Content">
+    <div id="Picture" style="background-image: url({%static '/Home/home-bg.jpg'%});">
+        <p>The largest community of art enthusiast</p>
+        <button onclick="window.location.href = '/Booking';">Book now</button>
+    </div>
+
+    <div class="Hero1" id="H11">
+        <img src="{% static '/Home/home2.jpg'%}" style ="">
+        <p class="">EXHIBITIONS ON VIEW A MUST-SEE FOR ALL ART LOVERS IN THE CITY!</p>
+    </div>
+
+    <div class="Hero1" id="H12">
+        <p>FEW EXCLUSIVE MASTERPIECES</p>
+        <img src="{% static '/Home/home3.jpEg'%}">
+    </div>
+
+    <div id="Hero2">
+        <p>Parikraman <br> A Journey into the <br> Time.... </p>
+        <img src="{% static '/Home/home4.png'%}">
+    </div>
+
+    <h1 id="Dept-Title">Department</h1>
+    <div id="Hero3">
+        <img class="gridpic" src="{% static '/Home/home5.jpEg'%}">
+        <img class="gridpic" src="{% static '/Home/home6.jpEg'%}">
+        <img class="gridpic" src="{% static '/Home/home7.jpeg'%}">
+        <p class="gridtext">Art Reference Library</p>
+        <p class="gridtext">Art Shop</p>
+        <p class="gridtext">Restoration Lab</p>
+    </div>
+
+    <div id="Hero4">
+        <p>Book now to experience our heritage</p>
+        <div>
+            <button id="Book" onclick="window.location.href = '/Booking';">Book Now</button>
+            <button id="Cont" onclick="window.location.href = '/ContactUs';">Contact Us</button>
+        </div>
+    </div>        
+</div> 
+ 
+ {% endblock body %}   
+    
+
+    

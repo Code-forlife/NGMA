@@ -7,21 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap" rel="stylesheet">
 
-    <style>
-        .Hero1>img{
-            width:30vw;
-            transition:transform 1s;
-        }
-
-        .Hero1>img:hover{
-            transform:scale(1.125);
-            cursor:pointer;
-        }
-
-        #Book:hover{
-            cursor:pointer;
-        }
-    </style>
+    
 
     {% endblock link %}
     
@@ -30,32 +16,54 @@
 
     {% block body %}
     <div id="Content">
-        <div id="Picture" style="background-image: url({% static '/ArtistPage/artist.webp'%});">
+        <!-- <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static '/ArtistPage/artist.webp'%}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
+          
+        <div id="Picture" style="background-image: url({% static '/ArtistPage/bg.jpg'%});">
         </div>
 
         <div class="Hero1" id="H11">
             <img src="{% static '/ArtistPage/artist1.webp'%}">
-            <p>A masterpice by famous russian artist Wassily Kandinsky</p>
+            <p class="image-desp">A masterpice by famous russian artist Wassily Kandinsky</p>
         </div>
 
         <div class="Hero1" id="H12">
-            <p>This is a masterpiece by famous Russian artist Nicholas Roerich while talking about famous Indian art work</p>
+            <p class="image-desp">This is a masterpiece by famous Russian artist Nicholas Roerich while talking about famous Indian art work</p>
             <img src="{% static '/ArtistPage/artist2.avif'%}">
         </div>
 
         <div class="Hero1" id="H11">
             <img src="{% static '/ArtistPage/artist3.jpeg'%}">
-            <p>This work is by the famous M. F. Husain aka the “Picasso of India”</p>
+            <p class="image-desp">This work is by the famous M. F. Husain aka the “Picasso of India”</p>
         </div>
 
         <div class="Hero1" id="H12">
-            <p>S. H. Raza is the maker of this amazing display of modern art</p>
+            <p class="image-desp">S. H. Raza is the maker of this amazing display of modern art</p>
             <img src="{% static '/ArtistPage/artist4.webp'%}">
         </div>
 
         <div class="Hero1" id="H11">
             <img src="{% static '/ArtistPage/artist5.webp'%}">
-            <p>This is a masterpice: "Starry Night" by the one and only Vincent Van Gogh</p>
+            <p class="image-desp">This is a masterpice: "Starry Night" by the one and only Vincent Van Gogh</p>
         </div>
         
         <div id="Hero4">
