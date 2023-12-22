@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Home{% endblock title %}
-{% block link %}<link rel="stylesheet" type="text/css" href="{% static '/Home/page.css' %}">
-<script >
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static '/Home/page.css' %}">
+<script>
 
     const icons = document.querySelectorAll('.section-1-icons i')
     let i = 1
-    
+
     setInterval(() => {
         i++
         const icon = document.querySelector('.section-1-icons .change')
         icon.classList.remove('change')
-    
+
         if (i > icons.length) {
             icons[0].classList.add('change')
             i = 1
@@ -32,13 +33,13 @@
     <!-- Section 1 -->
     <section class="section-1">
         <h1 class="section-heading">National Gallery of Modern Art</h1>
-      <div class="section-1-icons">
-        <center>
-          <i class="change image1"><img src="{%static '/Home/artist5.webp'%}" width="60%" height="30%"></i>
-          <i class="change image2"><img src="{%static '/Home/artist3.jpeg'%}" width="60%" height="10%"></i>
-          <i class="change image3"><img src="{%static '/Home/artist2.avif'%}" width="60%" height="10%"></i>
-          <i class="change image4"><img src="{%static '/Home/artist1.webp'%}" width="60%" height="10%"></i>
-        </center>
+        <div class="section-1-icons">
+            <center>
+                <i class="change image1"><img src="{%static '/Home/artist5.webp'%}" width="60%" height="30%"></i>
+                <i class="change image2"><img src="{%static '/Home/artist3.jpeg'%}" width="60%" height="10%"></i>
+                <i class="change image3"><img src="{%static '/Home/artist2.avif'%}" width="60%" height="10%"></i>
+                <i class="change image4"><img src="{%static '/Home/artist1.webp'%}" width="60%" height="10%"></i>
+            </center>
         </div>
     </section>
     <!-- End Section 1 -->
@@ -54,19 +55,18 @@
 
             </div>
             <div class="card">
-                <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 18.08.14_1d66b115.jpg'%}" class="card-img"/>
+                <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 18.08.14_1d66b115.jpg'%}" class="card-img" />
                 <h3 class="card-name">Maharaja's Treasure</h3>
                 <h6 class="card-name1">Select works of art from the famed Air India collection</h6>
             </div>
             <div class="card">
                 <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 18.11.15_9b751251.jpg'%}" class="card-img" />
                 <h3 class="card-name">Pratibimb</h3>
-                <h6 class="card-name1">Pratibimb (reflection) - an exhibition that showcases selected works of the acclaimed artist Abdulrahim Appabhai Almelkar (10" October, 1920 - 12" December, 1982).</h6>
+                <h6 class="card-name1">Pratibimb (reflection) - an exhibition that showcases selected works of the
+                    acclaimed artist Abdulrahim Appabhai Almelkar (10" October, 1920 - 12" December, 1982).</h6>
             </div>
         </div>
     </section>
-    <!-- End of Section 2 -->
-    
     <!-- End of Section 2 -->
 
     <!-- Section 3 -->
@@ -77,35 +77,42 @@
                 <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 17.52.08_ada59c1a.jpg'%}" class="food-img" />
                 <h3 class="food-name">Faces</h3>
                 <p class="food-description">
-                    This hand-painted piece of art is created with great zeal and perfection. We believe in quality all artworks at artoholic are created by renowed artists with their expertise, We use high quality imported canvas and colors.
+                    This hand-painted piece of art is created with great zeal and perfection. We believe in quality all
+                    artworks at artoholic are created by renowed artists with their expertise, We use high quality
+                    imported canvas and colors.
                 </p>
             </a>
             <a href="#" class="gallery-link" title="Order Now">
                 <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 17.52.18_d708c4f4.jpg'%}" class="food-img" />
                 <h3 class="food-name">Wakefield</h3>
                 <p class="food-description2">
-                    Wakefield artist Lisa V Robinson’s current series of paintings are underpinned by an interest in mark making, colour and form.
+                    Wakefield artist Lisa V Robinson's current series of paintings are underpinned by an interest in
+                    mark making, colour and form.
                 </p>
             </a>
             <a href="#" class="gallery-link" title="Order Now">
                 <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 18.00.31_43adcbaa.jpg'%}" class="food-img" />
                 <h3 class="food-name">Peter Cook</h3>
                 <p class="food-description">
-                    In its new exhibition Peter Cook: City Landscapes, Louisiana Museum of Modern Art showcases drawings by the influential architect, best known for his architectural theories and visionary concepts.
+                    In its new exhibition Peter Cook: City Landscapes, Louisiana Museum of Modern Art showcases drawings
+                    by the influential architect, best known for his architectural theories and visionary concepts.
                 </p>
             </a>
             <a href="#" class="gallery-link" title="Order Now">
                 <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 18.05.43_e6df7d0e.jpg'%}" class="food-img" />
                 <h3 class="food-name">Wassily Kandisky</h3>
                 <p class="food-description">
-                    Last in his lifelong series of ‘Compositions’, he sought to culminate his investigation into the purity of form and expression through this work.
+                    Last in his lifelong series of 'Compositions', he sought to culminate his investigation into the
+                    purity of form and expression through this work.
                 </p>
             </a>
             <a href="#" class="gallery-link" title="Order Now">
                 <img src="{%static '/Home/WhatsApp Image 2023-11-23 at 18.10.52_3a3a7ca3.jpg'%}" class="food-img" />
                 <h3 class="food-name">Better World</h3>
                 <p class="food-description">
-                    Audrey Zhang produced a coloured marker drawing of a water purifier that transforms polluted water into clean, sanitary water. The Google team animated this, before it appeared on the Google home page for a day.
+                    Audrey Zhang produced a coloured marker drawing of a water purifier that transforms polluted water
+                    into clean, sanitary water. The Google team animated this, before it appeared on the Google
+                    home page for a day.
                 </p>
             </a>
             <a href="#" class="gallery-link" title="Order Now">
@@ -113,17 +120,18 @@
                 <h3 class="food-name">Helgoland</h3>
                 <p class="food-description">
                     Arthur Segal
-Helgoland appears to be a work influenced by Cubism. At that time, Segal lived in Berlin, Germany, where he opened his own art school named Novembergruppe.
+                    Helgoland appears to be a work influenced by Cubism. At that time, Segal lived in Berlin, Germany,
+                    where he opened his own art school named Novembergruppe.
                 </p>
             </a>
         </div>
     </section>
     <!-- End of Section 3 -->
 
-    
-    </div>
 
-    
+</div>
 
 
-{% endblock body %}   
+
+
+{% endblock body %}
